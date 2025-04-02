@@ -1,0 +1,1001 @@
+PatientID,Age,Gender,BloodPressure,BloodSugar,MedicalHistory
+1,52,Male,112.0,126.0,Hypertension
+2,42,Female,123.0,64.0,Hyperlipidemia
+3,54,Male,93.0,70.0,None
+4,67,Female,100.0,74.0,Chronic Kidney Disease
+5,41,Male,,76.0,Hypertension
+6,41,Male,106.0,65.0,Hypertension
+7,68,Male,99.0,129.0,Hypertension
+8,56,Male,130.0,83.0,Hypertension
+9,37,Female,143.0,100.0,Diabetes
+10,53,Male,,75.0,Diabetes
+11,38,Female,139.0,52.0,Cardiovascular Disease
+12,38,Male,104.0,97.0,Hypertension
+13,48,Male,91.0,50.0,Cardiovascular Disease
+14,18,Male,150.0,88.0,Hyperlipidemia
+15,19,Female,113.0,59.0,Cardiovascular Disease
+16,36,Male,114.0,163.0,None
+17,29,Female,146.0,118.0,Diabetes
+18,49,Female,131.0,92.0,Diabetes
+19,31,Female,129.0,131.0,Hypertension
+20,23,Female,163.0,69.0,Hypertension
+21,66,Female,107.0,105.0,Hyperlipidemia
+22,41,Female,138.0,95.0,Chronic Kidney Disease
+23,46,Female,121.0,97.0,Hyperlipidemia
+24,23,Female,,131.0,None
+25,36,Female,150.0,112.0,Hypertension
+26,46,Male,130.0,98.0,Hypertension
+27,27,Male,130.0,54.0,Hyperlipidemia
+28,50,Male,141.0,67.0,Hyperlipidemia
+29,35,Male,112.0,86.0,Hyperlipidemia
+30,40,Male,103.0,92.0,Diabetes
+31,35,Female,99.0,64.0,Cardiovascular Disease
+32,72,Female,80.0,185.0,Cardiovascular Disease
+33,44,Female,,141.0,Hypertension
+34,29,Female,,107.0,Diabetes
+35,57,Female,115.0,91.0,Hyperlipidemia
+36,26,Female,114.0,84.0,Hypertension
+37,48,Female,126.0,67.0,Diabetes
+38,18,Male,136.0,92.0,None
+39,25,Male,137.0,97.0,Chronic Kidney Disease
+40,47,Male,108.0,62.0,Diabetes
+41,56,Male,116.0,99.0,Hypertension
+42,47,Female,125.0,85.0,Cardiovascular Disease
+43,43,Female,115.0,50.0,Hyperlipidemia
+44,40,Female,152.0,69.0,Chronic Kidney Disease
+45,22,Male,129.0,79.0,None
+46,34,Female,134.0,158.0,Chronic Kidney Disease
+47,38,Female,133.0,106.0,Chronic Kidney Disease
+48,60,Female,143.0,60.0,Diabetes
+49,50,Male,123.0,104.0,Hypertension
+50,18,Female,94.0,56.0,Hypertension
+51,49,Male,127.0,124.0,Chronic Kidney Disease
+52,39,Male,106.0,78.0,Hyperlipidemia
+53,34,Male,109.0,87.0,Hypertension
+54,54,Male,131.0,133.0,Chronic Kidney Disease
+55,60,Female,144.0,61.0,Hypertension
+56,58,Male,120.0,59.0,Hyperlipidemia
+57,32,Male,126.0,75.0,None
+58,40,Female,154.0,122.0,Chronic Kidney Disease
+59,49,Female,124.0,57.0,Cardiovascular Disease
+60,59,Male,172.0,38.0,Cardiovascular Disease
+61,37,Female,131.0,78.0,Chronic Kidney Disease
+62,42,Male,84.0,106.0,Diabetes
+63,28,Male,135.0,,None
+64,27,Male,127.0,78.0,Diabetes
+65,57,Male,145.0,79.0,Cardiovascular Disease
+66,65,Female,133.0,127.0,Hyperlipidemia
+67,43,Male,117.0,51.0,Chronic Kidney Disease
+68,60,Female,95.0,80.0,Hypertension
+69,50,Female,115.0,95.0,Cardiovascular Disease
+70,35,Female,102.0,103.0,None
+71,50,Female,108.0,77.0,Cardiovascular Disease
+72,68,Male,131.0,90.0,None
+73,44,Female,153.0,42.0,None
+74,68,Male,127.0,73.0,Chronic Kidney Disease
+75,18,Female,96.0,103.0,None
+76,57,Female,128.0,67.0,Diabetes
+77,46,Male,143.0,91.0,Hyperlipidemia
+78,40,Male,107.0,102.0,Cardiovascular Disease
+79,46,Male,117.0,81.0,Hyperlipidemia
+80,18,Female,120.0,94.0,Hypertension
+81,41,Female,104.0,67.0,Cardiovascular Disease
+82,50,Male,132.0,84.0,Hyperlipidemia
+83,67,Male,117.0,108.0,Hyperlipidemia
+84,37,Male,128.0,94.0,Chronic Kidney Disease
+85,32,Male,102.0,75.0,Chronic Kidney Disease
+86,37,Female,111.0,96.0,Hypertension
+87,58,Male,134.0,111.0,None
+88,49,Male,112.0,48.0,Cardiovascular Disease
+89,37,Male,154.0,127.0,Chronic Kidney Disease
+90,52,Male,112.0,81.0,Cardiovascular Disease
+91,46,Female,124.0,102.0,Hypertension
+92,59,Male,138.0,128.0,Chronic Kidney Disease
+93,34,Female,91.0,59.0,Chronic Kidney Disease
+94,40,Male,84.0,72.0,None
+95,39,Male,89.0,82.0,Cardiovascular Disease
+96,23,Female,145.0,71.0,Cardiovascular Disease
+97,49,Male,108.0,151.0,Cardiovascular Disease
+98,48,Female,171.0,69.0,None
+99,45,Female,108.0,76.0,Chronic Kidney Disease
+100,41,Male,123.0,95.0,Hypertension
+101,23,Female,150.0,62.0,Cardiovascular Disease
+102,38,Female,160.0,79.0,Hyperlipidemia
+103,39,Female,161.0,99.0,None
+104,32,Female,144.0,81.0,Diabetes
+105,42,Female,,87.0,Hypertension
+106,51,Female,131.0,76.0,Hyperlipidemia
+107,73,Female,135.0,57.0,Cardiovascular Disease
+108,47,Female,108.0,99.0,Diabetes
+109,48,Male,103.0,152.0,Hypertension
+110,43,Male,119.0,90.0,None
+111,18,Female,116.0,96.0,Diabetes
+112,44,Male,110.0,110.0,Chronic Kidney Disease
+113,45,Female,133.0,61.0,Diabetes
+114,81,Female,139.0,150.0,Hyperlipidemia
+115,42,Male,121.0,95.0,Hypertension
+116,49,Female,149.0,146.0,Hyperlipidemia
+117,44,Female,,72.0,Hyperlipidemia
+118,27,Female,116.0,155.0,Cardiovascular Disease
+119,62,Female,105.0,113.0,None
+120,56,Male,82.0,106.0,Diabetes
+121,56,Female,118.0,96.0,Hypertension
+122,31,Female,117.0,83.0,Chronic Kidney Disease
+123,66,Female,150.0,129.0,None
+124,23,Male,132.0,93.0,None
+125,53,Female,99.0,49.0,Hypertension
+126,77,Male,157.0,64.0,
+127,30,Male,144.0,85.0,Cardiovascular Disease
+128,36,Female,131.0,98.0,None
+129,46,Female,115.0,88.0,Cardiovascular Disease
+130,37,Male,100.0,129.0,Diabetes
+131,21,Female,112.0,50.0,Diabetes
+132,46,Male,141.0,93.0,Hyperlipidemia
+133,29,Male,157.0,52.0,Cardiovascular Disease
+134,52,Female,150.0,113.0,Chronic Kidney Disease
+135,31,Female,110.0,87.0,Diabetes
+136,68,Male,97.0,102.0,None
+137,33,Male,122.0,69.0,Hypertension
+138,40,Male,84.0,132.0,Hypertension
+139,57,Male,126.0,123.0,Cardiovascular Disease
+140,26,Female,117.0,107.0,Chronic Kidney Disease
+141,48,Female,110.0,86.0,Hyperlipidemia
+142,64,Female,88.0,107.0,None
+143,20,Female,130.0,72.0,Cardiovascular Disease
+144,47,Female,109.0,116.0,Hypertension
+145,48,Male,96.0,147.0,Cardiovascular Disease
+146,56,Female,62.0,124.0,None
+147,26,Female,119.0,72.0,Chronic Kidney Disease
+148,25,Female,155.0,100.0,Chronic Kidney Disease
+149,52,Female,153.0,61.0,Diabetes
+150,49,Female,110.0,,None
+151,48,Male,107.0,103.0,Diabetes
+152,50,Male,129.0,51.0,Diabetes
+153,34,Male,100.0,63.0,Diabetes
+154,48,Female,126.0,82.0,Cardiovascular Disease
+155,49,Male,135.0,82.0,Hypertension
+156,34,Male,144.0,62.0,Chronic Kidney Disease
+157,72,Female,117.0,101.0,
+158,52,Female,115.0,97.0,Hypertension
+159,27,Female,102.0,84.0,Chronic Kidney Disease
+160,54,Male,103.0,71.0,None
+161,30,Male,115.0,123.0,Chronic Kidney Disease
+162,56,Female,,147.0,Chronic Kidney Disease
+163,62,Female,138.0,77.0,Chronic Kidney Disease
+164,32,Male,103.0,74.0,Hyperlipidemia
+165,59,Male,,104.0,None
+166,51,Female,114.0,80.0,Cardiovascular Disease
+167,57,Female,119.0,86.0,Cardiovascular Disease
+168,73,Male,,112.0,Hypertension
+169,41,Female,71.0,50.0,Cardiovascular Disease
+170,33,Male,137.0,133.0,Diabetes
+171,31,Male,134.0,92.0,Chronic Kidney Disease
+172,32,Male,114.0,79.0,Cardiovascular Disease
+173,43,Male,121.0,87.0,Hypertension
+174,50,Female,130.0,89.0,Hypertension
+175,49,Female,88.0,53.0,Diabetes
+176,57,Male,109.0,140.0,Hypertension
+177,45,Male,135.0,91.0,Hyperlipidemia
+178,66,Male,94.0,102.0,Chronic Kidney Disease
+179,41,Male,125.0,119.0,Chronic Kidney Disease
+180,85,Male,92.0,66.0,
+181,54,Female,129.0,103.0,None
+182,32,Female,119.0,83.0,Cardiovascular Disease
+183,28,Female,87.0,116.0,Hyperlipidemia
+184,52,Female,143.0,47.0,Cardiovascular Disease
+185,41,Male,105.0,87.0,Hyperlipidemia
+186,55,Male,103.0,75.0,Cardiovascular Disease
+187,52,Male,124.0,102.0,Diabetes
+188,43,Male,142.0,103.0,Hypertension
+189,32,Male,99.0,72.0,Hypertension
+190,22,Female,121.0,72.0,Diabetes
+191,38,Male,128.0,87.0,Hyperlipidemia
+192,57,Female,133.0,68.0,None
+193,48,Female,123.0,115.0,Hyperlipidemia
+194,26,Female,112.0,80.0,Hypertension
+195,47,Female,103.0,37.0,None
+196,50,Male,121.0,80.0,Cardiovascular Disease
+197,31,Female,98.0,65.0,None
+198,47,Female,61.0,55.0,Hyperlipidemia
+199,45,Female,128.0,62.0,Diabetes
+200,27,Male,138.0,93.0,Cardiovascular Disease
+201,50,Male,72.0,134.0,Hyperlipidemia
+202,53,Male,99.0,98.0,Cardiovascular Disease
+203,61,Female,132.0,75.0,None
+204,60,Female,161.0,103.0,Hypertension
+205,24,Male,120.0,78.0,Hyperlipidemia
+206,30,Female,105.0,73.0,Diabetes
+207,52,Male,116.0,63.0,None
+208,52,Male,147.0,53.0,Hyperlipidemia
+209,52,Female,107.0,80.0,Diabetes
+210,90,Female,104.0,94.0,Hyperlipidemia
+211,53,Female,110.0,87.0,None
+212,62,Female,100.0,79.0,Hyperlipidemia
+213,59,Male,122.0,67.0,Cardiovascular Disease
+214,54,Male,152.0,108.0,None
+215,40,Male,126.0,60.0,Hyperlipidemia
+216,56,Male,114.0,113.0,Hypertension
+217,33,Male,114.0,66.0,Hyperlipidemia
+218,41,Female,88.0,71.0,Cardiovascular Disease
+219,37,Male,137.0,57.0,Diabetes
+220,46,Male,118.0,77.0,Diabetes
+221,79,Male,116.0,120.0,
+222,18,Female,183.0,105.0,Hypertension
+223,55,Female,125.0,120.0,Cardiovascular Disease
+224,20,Female,104.0,105.0,None
+225,37,Female,111.0,64.0,Diabetes
+226,61,Male,142.0,81.0,Cardiovascular Disease
+227,45,Male,122.0,71.0,Hyperlipidemia
+228,28,Female,91.0,134.0,Hypertension
+229,34,Female,138.0,62.0,Cardiovascular Disease
+230,55,Male,106.0,117.0,Cardiovascular Disease
+231,34,Male,157.0,117.0,None
+232,48,Female,141.0,155.0,Cardiovascular Disease
+233,45,Female,111.0,79.0,None
+234,35,Female,145.0,111.0,Hypertension
+235,77,Female,121.0,178.0,Hypertension
+236,54,Male,137.0,74.0,Hyperlipidemia
+237,18,Male,129.0,56.0,None
+238,47,Male,103.0,51.0,None
+239,35,Female,107.0,,Diabetes
+240,57,Female,140.0,51.0,Diabetes
+241,33,Male,,80.0,Hyperlipidemia
+242,43,Male,111.0,102.0,Hypertension
+243,52,Male,100.0,95.0,Chronic Kidney Disease
+244,57,Male,128.0,102.0,Diabetes
+245,26,Female,161.0,96.0,Cardiovascular Disease
+246,39,Male,98.0,132.0,Hypertension
+247,37,Male,120.0,67.0,Chronic Kidney Disease
+248,35,Male,148.0,73.0,Cardiovascular Disease
+249,71,Male,,71.0,None
+250,51,Male,129.0,115.0,Hypertension
+251,26,Male,98.0,117.0,Hyperlipidemia
+252,58,Male,128.0,103.0,None
+253,76,Female,116.0,128.0,None
+254,60,Female,139.0,63.0,Cardiovascular Disease
+255,22,Female,143.0,148.0,None
+256,37,Female,171.0,142.0,Diabetes
+257,64,Male,131.0,112.0,Hypertension
+258,34,Female,126.0,153.0,Diabetes
+259,51,Female,123.0,54.0,Cardiovascular Disease
+260,56,Male,112.0,76.0,Chronic Kidney Disease
+261,31,Male,126.0,72.0,Cardiovascular Disease
+262,44,Female,114.0,111.0,Hypertension
+263,18,Female,123.0,65.0,None
+264,29,Male,146.0,112.0,Hyperlipidemia
+265,41,Female,99.0,135.0,Cardiovascular Disease
+266,26,Male,142.0,,Hypertension
+267,69,Male,146.0,98.0,Hyperlipidemia
+268,23,Male,117.0,66.0,None
+269,38,Male,77.0,69.0,Chronic Kidney Disease
+270,46,Female,107.0,130.0,Cardiovascular Disease
+271,66,Male,145.0,113.0,Chronic Kidney Disease
+272,23,Male,119.0,88.0,Hypertension
+273,62,Female,100.0,79.0,Chronic Kidney Disease
+274,45,Male,109.0,49.0,Chronic Kidney Disease
+275,30,Female,136.0,65.0,Hypertension
+276,51,Female,130.0,159.0,Hypertension
+277,47,Female,115.0,61.0,Cardiovascular Disease
+278,35,Male,112.0,95.0,Chronic Kidney Disease
+279,46,Female,112.0,121.0,Hyperlipidemia
+280,39,Female,101.0,61.0,Hypertension
+281,46,Male,152.0,95.0,None
+282,54,Female,113.0,119.0,Chronic Kidney Disease
+283,68,Female,144.0,90.0,Hypertension
+284,26,Female,150.0,212.0,Hyperlipidemia
+285,76,Female,139.0,54.0,
+286,18,Female,,123.0,Chronic Kidney Disease
+287,42,Male,128.0,85.0,Hypertension
+288,53,Female,119.0,113.0,Hypertension
+289,49,Female,101.0,102.0,None
+290,35,Male,126.0,72.0,None
+291,41,Male,96.0,96.0,Chronic Kidney Disease
+292,37,Male,143.0,51.0,Hypertension
+293,36,Female,110.0,107.0,Chronic Kidney Disease
+294,57,Male,,98.0,Hypertension
+295,50,Female,125.0,109.0,None
+296,34,Female,114.0,123.0,Hyperlipidemia
+297,58,Male,131.0,100.0,Diabetes
+298,49,Male,110.0,94.0,Diabetes
+299,57,Female,137.0,69.0,Hypertension
+300,54,Male,93.0,,None
+301,32,Female,122.0,128.0,Cardiovascular Disease
+302,36,Male,158.0,138.0,Cardiovascular Disease
+303,56,Male,99.0,83.0,Diabetes
+304,54,Male,106.0,91.0,Hyperlipidemia
+305,44,Female,130.0,68.0,Diabetes
+306,46,Male,123.0,127.0,Hypertension
+307,64,Female,127.0,109.0,Hyperlipidemia
+308,36,Female,129.0,161.0,Cardiovascular Disease
+309,53,Female,132.0,69.0,None
+310,41,Female,142.0,80.0,None
+311,41,Male,128.0,96.0,Hypertension
+312,61,Female,115.0,109.0,Diabetes
+313,57,Female,133.0,84.0,Hypertension
+314,57,Male,157.0,69.0,None
+315,64,Female,117.0,117.0,Cardiovascular Disease
+316,45,Male,100.0,111.0,None
+317,55,Female,142.0,68.0,Hyperlipidemia
+318,40,Male,117.0,135.0,Chronic Kidney Disease
+319,49,Female,76.0,127.0,None
+320,43,Male,136.0,93.0,None
+321,46,Female,109.0,92.0,Chronic Kidney Disease
+322,53,Female,118.0,106.0,Hyperlipidemia
+323,32,Male,126.0,69.0,Diabetes
+324,76,Male,123.0,90.0,None
+325,29,Male,134.0,47.0,Hypertension
+326,26,Male,111.0,117.0,None
+327,62,Female,130.0,56.0,Hypertension
+328,56,Female,,141.0,Hyperlipidemia
+329,54,Male,134.0,81.0,None
+330,54,Female,132.0,84.0,Hyperlipidemia
+331,44,Male,101.0,74.0,Hyperlipidemia
+332,31,Male,141.0,82.0,Diabetes
+333,46,Female,109.0,137.0,None
+334,34,Female,,42.0,Hypertension
+335,59,Female,127.0,132.0,Hypertension
+336,42,Female,156.0,99.0,None
+337,32,Female,,62.0,Chronic Kidney Disease
+338,40,Female,113.0,65.0,Diabetes
+339,51,Female,119.0,148.0,Diabetes
+340,36,Male,113.0,67.0,Diabetes
+341,32,Male,135.0,63.0,Hypertension
+342,48,Male,87.0,126.0,Hyperlipidemia
+343,48,Male,98.0,99.0,Chronic Kidney Disease
+344,37,Male,98.0,67.0,Diabetes
+345,37,Female,139.0,96.0,Hypertension
+346,48,Male,,66.0,Hypertension
+347,23,Male,117.0,125.0,Hyperlipidemia
+348,23,Male,116.0,123.0,None
+349,34,Male,121.0,105.0,None
+350,41,Male,143.0,100.0,Diabetes
+351,49,Male,101.0,152.0,Diabetes
+352,67,Male,124.0,90.0,Chronic Kidney Disease
+353,57,Female,139.0,63.0,Hyperlipidemia
+354,42,Female,130.0,103.0,Diabetes
+355,44,Male,123.0,168.0,Hyperlipidemia
+356,29,Female,140.0,66.0,Hypertension
+357,44,Female,65.0,80.0,Diabetes
+358,40,Female,133.0,101.0,Hypertension
+359,49,Female,106.0,88.0,Cardiovascular Disease
+360,32,Male,83.0,67.0,Hyperlipidemia
+361,52,Female,,126.0,Cardiovascular Disease
+362,67,Female,147.0,180.0,Diabetes
+363,43,Female,117.0,95.0,Hypertension
+364,51,Male,139.0,68.0,Diabetes
+365,55,Male,152.0,56.0,Cardiovascular Disease
+366,38,Male,146.0,97.0,Diabetes
+367,48,Male,152.0,125.0,Chronic Kidney Disease
+368,45,Male,134.0,103.0,None
+369,46,Male,121.0,89.0,Cardiovascular Disease
+370,33,Male,87.0,75.0,Diabetes
+371,45,Female,115.0,,Hypertension
+372,52,Female,103.0,115.0,Diabetes
+373,66,Female,163.0,118.0,Hypertension
+374,59,Male,116.0,56.0,None
+375,77,Male,122.0,145.0,Diabetes
+376,33,Male,131.0,106.0,None
+377,58,Male,120.0,136.0,Cardiovascular Disease
+378,47,Male,153.0,60.0,Hypertension
+379,77,Female,107.0,59.0,Chronic Kidney Disease
+380,32,Female,123.0,86.0,Cardiovascular Disease
+381,32,Male,105.0,104.0,Hypertension
+382,36,Male,93.0,154.0,None
+383,18,Male,107.0,111.0,Hyperlipidemia
+384,37,Male,119.0,83.0,Diabetes
+385,33,Female,111.0,66.0,None
+386,47,Male,106.0,,Hypertension
+387,50,Male,91.0,67.0,Hypertension
+388,73,Male,118.0,146.0,Hypertension
+389,59,Male,89.0,82.0,Hypertension
+390,36,Female,135.0,145.0,Diabetes
+391,31,Male,121.0,110.0,Cardiovascular Disease
+392,52,Male,90.0,86.0,Chronic Kidney Disease
+393,25,Female,113.0,77.0,Hyperlipidemia
+394,72,Female,104.0,81.0,Diabetes
+395,62,Female,126.0,102.0,Hypertension
+396,37,Male,146.0,92.0,Diabetes
+397,19,Male,82.0,75.0,None
+398,65,Female,122.0,85.0,Chronic Kidney Disease
+399,43,Female,116.0,92.0,Hypertension
+400,63,Female,133.0,47.0,Hyperlipidemia
+401,21,Female,124.0,103.0,Hypertension
+402,36,Female,104.0,67.0,Chronic Kidney Disease
+403,45,Female,113.0,63.0,Hyperlipidemia
+404,45,Male,,54.0,Chronic Kidney Disease
+405,38,Male,141.0,52.0,Hyperlipidemia
+406,54,Male,120.0,59.0,Cardiovascular Disease
+407,28,Female,158.0,72.0,Cardiovascular Disease
+408,42,Female,118.0,161.0,Diabetes
+409,46,Female,105.0,76.0,Diabetes
+410,52,Female,89.0,94.0,Hyperlipidemia
+411,55,Female,83.0,101.0,Hypertension
+412,28,Female,88.0,93.0,None
+413,21,Male,125.0,87.0,None
+414,64,Male,130.0,62.0,Hypertension
+415,49,Female,88.0,139.0,Hypertension
+416,33,Male,137.0,154.0,Cardiovascular Disease
+417,68,Female,110.0,54.0,None
+418,46,Male,122.0,66.0,Hyperlipidemia
+419,62,Female,152.0,82.0,Chronic Kidney Disease
+420,46,Female,137.0,67.0,Diabetes
+421,75,Male,114.0,104.0,Chronic Kidney Disease
+422,71,Male,102.0,72.0,
+423,41,Female,76.0,172.0,None
+424,59,Female,,128.0,Hypertension
+425,54,Male,115.0,95.0,None
+426,65,Male,100.0,122.0,Hyperlipidemia
+427,30,Female,117.0,125.0,Cardiovascular Disease
+428,55,Male,121.0,76.0,Hypertension
+429,60,Female,115.0,70.0,Chronic Kidney Disease
+430,18,Female,106.0,92.0,Hyperlipidemia
+431,27,Female,123.0,116.0,Chronic Kidney Disease
+432,18,Female,128.0,93.0,Diabetes
+433,40,Male,98.0,56.0,Cardiovascular Disease
+434,55,Male,148.0,70.0,Hyperlipidemia
+435,67,Male,118.0,88.0,Hyperlipidemia
+436,46,Male,120.0,87.0,Chronic Kidney Disease
+437,69,Male,134.0,162.0,Hypertension
+438,24,Male,124.0,59.0,Diabetes
+439,19,Male,139.0,104.0,Chronic Kidney Disease
+440,44,Female,,140.0,Hyperlipidemia
+441,50,Male,,177.0,Cardiovascular Disease
+442,44,Male,127.0,79.0,Hyperlipidemia
+443,18,Female,97.0,104.0,None
+444,43,Male,122.0,106.0,Cardiovascular Disease
+445,25,Male,119.0,95.0,Cardiovascular Disease
+446,55,Female,115.0,87.0,Hyperlipidemia
+447,50,Male,117.0,102.0,Hypertension
+448,30,Male,82.0,42.0,Cardiovascular Disease
+449,37,Male,109.0,110.0,None
+450,29,Female,121.0,93.0,Chronic Kidney Disease
+451,44,Male,123.0,84.0,Hypertension
+452,59,Male,99.0,166.0,Hypertension
+453,30,Female,145.0,73.0,Hypertension
+454,52,Male,102.0,79.0,Cardiovascular Disease
+455,37,Female,139.0,163.0,Hypertension
+456,33,Female,,70.0,Hyperlipidemia
+457,43,Male,107.0,76.0,Hypertension
+458,29,Female,155.0,86.0,None
+459,36,Female,96.0,115.0,Diabetes
+460,27,Male,138.0,95.0,None
+461,74,Female,140.0,61.0,Cardiovascular Disease
+462,45,Female,106.0,76.0,Hypertension
+463,34,Male,147.0,75.0,Hypertension
+464,48,Male,114.0,87.0,Hyperlipidemia
+465,43,Male,125.0,102.0,Chronic Kidney Disease
+466,41,Female,125.0,102.0,Hypertension
+467,54,Male,117.0,52.0,None
+468,56,Female,136.0,123.0,Cardiovascular Disease
+469,37,Female,135.0,97.0,Diabetes
+470,36,Female,85.0,136.0,Hypertension
+471,40,Female,146.0,102.0,Diabetes
+472,18,Female,86.0,125.0,Hypertension
+473,22,Female,140.0,103.0,Cardiovascular Disease
+474,65,Female,142.0,134.0,Chronic Kidney Disease
+475,69,Male,98.0,105.0,None
+476,41,Male,111.0,87.0,Cardiovascular Disease
+477,53,Female,97.0,177.0,Diabetes
+478,49,Female,115.0,117.0,Hypertension
+479,90,Male,113.0,106.0,Diabetes
+480,61,Female,135.0,61.0,None
+481,43,Male,146.0,61.0,Cardiovascular Disease
+482,30,Male,147.0,98.0,Diabetes
+483,20,Male,108.0,94.0,Diabetes
+484,48,Female,115.0,74.0,None
+485,33,Female,86.0,93.0,Hypertension
+486,23,Male,103.0,144.0,Diabetes
+487,35,Male,,110.0,None
+488,28,Male,152.0,63.0,Hypertension
+489,70,Male,95.0,87.0,Chronic Kidney Disease
+490,58,Male,108.0,70.0,Hypertension
+491,44,Female,119.0,80.0,Chronic Kidney Disease
+492,67,Male,125.0,,Cardiovascular Disease
+493,46,Female,103.0,77.0,None
+494,32,Male,128.0,61.0,Hypertension
+495,67,Female,110.0,86.0,Chronic Kidney Disease
+496,53,Female,119.0,76.0,Chronic Kidney Disease
+497,29,Female,,37.0,Cardiovascular Disease
+498,42,Female,120.0,166.0,Hyperlipidemia
+499,31,Female,111.0,124.0,None
+500,24,Female,117.0,80.0,Hyperlipidemia
+501,58,Male,118.0,90.0,Hypertension
+502,73,Female,112.0,63.0,None
+503,24,Male,114.0,149.0,Cardiovascular Disease
+504,53,Female,151.0,159.0,Hypertension
+505,35,Female,131.0,94.0,None
+506,37,Male,114.0,122.0,None
+507,36,Female,133.0,94.0,Hyperlipidemia
+508,32,Male,113.0,60.0,Hypertension
+509,45,Male,143.0,79.0,Cardiovascular Disease
+510,32,Male,127.0,93.0,Cardiovascular Disease
+511,49,Male,117.0,78.0,Hypertension
+512,44,Female,128.0,84.0,Hypertension
+513,41,Female,,87.0,Chronic Kidney Disease
+514,31,Male,97.0,,Diabetes
+515,36,Female,96.0,91.0,Hyperlipidemia
+516,56,Female,122.0,65.0,Hypertension
+517,52,Male,154.0,72.0,Hypertension
+518,30,Female,164.0,61.0,Diabetes
+519,46,Male,,120.0,Diabetes
+520,56,Male,130.0,47.0,None
+521,19,Female,,127.0,Cardiovascular Disease
+522,53,Female,109.0,136.0,Hyperlipidemia
+523,35,Female,104.0,82.0,None
+524,53,Male,107.0,41.0,Hypertension
+525,33,Male,116.0,80.0,Diabetes
+526,18,Female,110.0,88.0,Chronic Kidney Disease
+527,20,Female,80.0,66.0,Cardiovascular Disease
+528,45,Female,134.0,77.0,None
+529,48,Female,98.0,142.0,Chronic Kidney Disease
+530,31,Male,124.0,109.0,Cardiovascular Disease
+531,54,Female,161.0,68.0,Chronic Kidney Disease
+532,20,Male,101.0,55.0,Diabetes
+533,44,Male,69.0,81.0,None
+534,26,Female,114.0,84.0,None
+535,35,Female,142.0,104.0,Cardiovascular Disease
+536,45,Female,159.0,76.0,Chronic Kidney Disease
+537,32,Male,95.0,104.0,Diabetes
+538,39,Female,129.0,160.0,Hypertension
+539,60,Female,110.0,114.0,None
+540,36,Male,117.0,88.0,Hypertension
+541,57,Female,172.0,85.0,Diabetes
+542,28,Male,89.0,80.0,None
+543,52,Female,125.0,128.0,None
+544,66,Male,129.0,74.0,Chronic Kidney Disease
+545,18,Female,,91.0,Hypertension
+546,33,Female,121.0,91.0,Chronic Kidney Disease
+547,53,Male,126.0,77.0,Hyperlipidemia
+548,41,Male,112.0,59.0,Hypertension
+549,50,Female,125.0,99.0,Hypertension
+550,35,Male,113.0,88.0,Hyperlipidemia
+551,46,Male,132.0,104.0,Diabetes
+552,42,Male,112.0,76.0,Diabetes
+553,62,Male,127.0,129.0,None
+554,48,Female,119.0,69.0,Cardiovascular Disease
+555,50,Female,142.0,150.0,Chronic Kidney Disease
+556,38,Male,118.0,53.0,Cardiovascular Disease
+557,37,Male,84.0,102.0,None
+558,38,Male,145.0,103.0,Cardiovascular Disease
+559,50,Male,101.0,70.0,Hypertension
+560,38,Female,106.0,102.0,Hypertension
+561,49,Female,108.0,132.0,Hyperlipidemia
+562,76,Male,,46.0,Hyperlipidemia
+563,58,Male,77.0,104.0,None
+564,40,Male,182.0,42.0,None
+565,63,Female,141.0,67.0,None
+566,38,Male,124.0,146.0,Hypertension
+567,18,Female,118.0,,Cardiovascular Disease
+568,29,Male,125.0,63.0,Chronic Kidney Disease
+569,18,Female,130.0,84.0,None
+570,39,Male,132.0,167.0,None
+571,45,Female,131.0,51.0,Hypertension
+572,70,Male,121.0,65.0,Chronic Kidney Disease
+573,49,Male,116.0,141.0,Hypertension
+574,41,Male,116.0,157.0,Chronic Kidney Disease
+575,57,Female,116.0,87.0,Hypertension
+576,18,Male,142.0,62.0,Cardiovascular Disease
+577,48,Female,131.0,168.0,None
+578,56,Female,61.0,145.0,Diabetes
+579,22,Male,133.0,110.0,Diabetes
+580,62,Male,123.0,70.0,None
+581,50,Male,119.0,88.0,None
+582,38,Female,112.0,85.0,None
+583,54,Male,142.0,99.0,None
+584,79,Female,138.0,,
+585,47,Female,104.0,117.0,Cardiovascular Disease
+586,48,Male,128.0,65.0,Diabetes
+587,38,Male,100.0,136.0,Hyperlipidemia
+588,32,Male,,98.0,Diabetes
+589,57,Male,107.0,110.0,Diabetes
+590,32,Male,,139.0,Hypertension
+591,46,Male,139.0,64.0,None
+592,37,Female,130.0,89.0,None
+593,52,Female,134.0,76.0,None
+594,50,Female,130.0,56.0,Hypertension
+595,60,Male,107.0,99.0,Cardiovascular Disease
+596,37,Female,128.0,191.0,Cardiovascular Disease
+597,40,Female,136.0,51.0,Hyperlipidemia
+598,30,Female,135.0,89.0,Cardiovascular Disease
+599,38,Female,143.0,109.0,Cardiovascular Disease
+600,50,Female,134.0,93.0,None
+601,56,Male,127.0,87.0,Chronic Kidney Disease
+602,31,Male,141.0,60.0,Diabetes
+603,58,Female,119.0,96.0,Cardiovascular Disease
+604,65,Female,102.0,71.0,Cardiovascular Disease
+605,51,Female,116.0,46.0,Hypertension
+606,73,Male,105.0,128.0,
+607,33,Male,,120.0,Chronic Kidney Disease
+608,26,Female,117.0,91.0,Hypertension
+609,18,Male,104.0,96.0,None
+610,67,Male,113.0,124.0,Diabetes
+611,54,Female,82.0,96.0,Hyperlipidemia
+612,44,Male,124.0,118.0,Hypertension
+613,49,Male,120.0,82.0,Cardiovascular Disease
+614,28,Female,103.0,133.0,Cardiovascular Disease
+615,81,Male,133.0,99.0,
+616,46,Male,138.0,95.0,Cardiovascular Disease
+617,46,Female,87.0,61.0,Hypertension
+618,55,Male,104.0,98.0,Hypertension
+619,52,Male,104.0,70.0,Cardiovascular Disease
+620,48,Female,101.0,74.0,Cardiovascular Disease
+621,33,Female,136.0,70.0,None
+622,52,Female,116.0,65.0,Diabetes
+623,73,Male,114.0,170.0,
+624,65,Female,79.0,134.0,Hypertension
+625,68,Male,132.0,160.0,Hyperlipidemia
+626,37,Female,95.0,62.0,None
+627,30,Male,121.0,91.0,Hypertension
+628,43,Female,125.0,61.0,None
+629,45,Female,147.0,73.0,None
+630,61,Female,93.0,68.0,Chronic Kidney Disease
+631,19,Female,59.0,130.0,Cardiovascular Disease
+632,67,Male,123.0,79.0,Chronic Kidney Disease
+633,42,Female,156.0,124.0,Hyperlipidemia
+634,38,Female,144.0,107.0,Hyperlipidemia
+635,29,Male,124.0,179.0,Cardiovascular Disease
+636,20,Female,110.0,57.0,Chronic Kidney Disease
+637,57,Male,,131.0,Hyperlipidemia
+638,46,Female,100.0,126.0,Chronic Kidney Disease
+639,25,Female,129.0,67.0,Cardiovascular Disease
+640,25,Female,130.0,121.0,Hypertension
+641,39,Male,141.0,99.0,None
+642,70,Female,175.0,84.0,None
+643,41,Female,127.0,70.0,Chronic Kidney Disease
+644,22,Female,109.0,72.0,Hyperlipidemia
+645,41,Male,119.0,166.0,Chronic Kidney Disease
+646,40,Male,84.0,,Chronic Kidney Disease
+647,18,Female,106.0,113.0,Diabetes
+648,44,Male,111.0,71.0,None
+649,41,Female,109.0,71.0,Cardiovascular Disease
+650,55,Female,123.0,124.0,Chronic Kidney Disease
+651,72,Female,103.0,60.0,Diabetes
+652,61,Female,142.0,79.0,Diabetes
+653,40,Female,120.0,90.0,None
+654,28,Female,119.0,93.0,None
+655,83,Female,113.0,85.0,None
+656,45,Male,123.0,101.0,Cardiovascular Disease
+657,45,Male,136.0,110.0,Diabetes
+658,44,Male,102.0,112.0,Hyperlipidemia
+659,47,Male,106.0,,Cardiovascular Disease
+660,42,Male,113.0,82.0,Hypertension
+661,36,Male,93.0,128.0,Chronic Kidney Disease
+662,36,Male,103.0,117.0,None
+663,44,Female,110.0,59.0,Diabetes
+664,36,Female,137.0,100.0,Chronic Kidney Disease
+665,34,Female,125.0,49.0,Cardiovascular Disease
+666,46,Female,123.0,91.0,Hypertension
+667,41,Male,137.0,159.0,Cardiovascular Disease
+668,67,Male,117.0,67.0,Cardiovascular Disease
+669,18,Female,127.0,70.0,Hyperlipidemia
+670,61,Female,117.0,113.0,Chronic Kidney Disease
+671,63,Male,125.0,56.0,Hyperlipidemia
+672,18,Female,108.0,74.0,Cardiovascular Disease
+673,39,Female,71.0,107.0,Hypertension
+674,39,Female,117.0,74.0,Diabetes
+675,23,Female,148.0,83.0,Diabetes
+676,33,Male,138.0,112.0,Chronic Kidney Disease
+677,28,Female,139.0,102.0,None
+678,71,Female,144.0,97.0,None
+679,59,Male,121.0,81.0,Diabetes
+680,64,Male,123.0,100.0,Cardiovascular Disease
+681,55,Female,107.0,86.0,Cardiovascular Disease
+682,28,Male,113.0,103.0,Hyperlipidemia
+683,37,Female,132.0,77.0,Chronic Kidney Disease
+684,52,Female,144.0,85.0,Hyperlipidemia
+685,26,Male,117.0,66.0,None
+686,55,Female,110.0,89.0,Diabetes
+687,41,Female,120.0,70.0,Cardiovascular Disease
+688,39,Female,132.0,64.0,Diabetes
+689,55,Female,91.0,97.0,Hypertension
+690,51,Male,74.0,95.0,Diabetes
+691,39,Male,108.0,113.0,Hypertension
+692,62,Female,95.0,79.0,Hyperlipidemia
+693,28,Male,109.0,101.0,Hyperlipidemia
+694,54,Female,117.0,106.0,None
+695,53,Female,110.0,102.0,Diabetes
+696,40,Female,149.0,70.0,Diabetes
+697,49,Female,126.0,94.0,Hypertension
+698,26,Female,126.0,100.0,Hyperlipidemia
+699,58,Male,132.0,90.0,Hypertension
+700,42,Female,97.0,48.0,Hyperlipidemia
+701,37,Male,140.0,94.0,Hypertension
+702,60,Male,118.0,174.0,Hyperlipidemia
+703,34,Female,133.0,80.0,Hypertension
+704,23,Female,98.0,72.0,Hyperlipidemia
+705,21,Female,88.0,100.0,Chronic Kidney Disease
+706,54,Female,136.0,98.0,Hypertension
+707,25,Female,127.0,128.0,Diabetes
+708,71,Male,101.0,61.0,None
+709,18,Female,102.0,112.0,Chronic Kidney Disease
+710,70,Female,142.0,107.0,Chronic Kidney Disease
+711,48,Male,96.0,86.0,Hypertension
+712,43,Male,152.0,99.0,None
+713,36,Female,101.0,122.0,Diabetes
+714,50,Male,132.0,116.0,Chronic Kidney Disease
+715,44,Female,113.0,63.0,Diabetes
+716,61,Male,132.0,115.0,Hyperlipidemia
+717,46,Male,109.0,88.0,None
+718,47,Female,116.0,92.0,Cardiovascular Disease
+719,39,Male,120.0,92.0,Hyperlipidemia
+720,44,Male,99.0,,None
+721,49,Male,134.0,128.0,Hypertension
+722,19,Male,109.0,87.0,Hypertension
+723,24,Male,115.0,64.0,Diabetes
+724,56,Male,100.0,79.0,Chronic Kidney Disease
+725,47,Female,,94.0,Cardiovascular Disease
+726,42,Female,116.0,130.0,Hypertension
+727,45,Male,168.0,107.0,None
+728,50,Female,135.0,69.0,Chronic Kidney Disease
+729,36,Female,119.0,189.0,Chronic Kidney Disease
+730,33,Female,114.0,97.0,None
+731,47,Male,120.0,131.0,Chronic Kidney Disease
+732,30,Female,130.0,86.0,Hypertension
+733,51,Male,96.0,105.0,None
+734,19,Female,142.0,115.0,None
+735,60,Male,134.0,129.0,Diabetes
+736,52,Male,134.0,123.0,Cardiovascular Disease
+737,48,Female,128.0,116.0,Diabetes
+738,59,Female,120.0,81.0,Cardiovascular Disease
+739,69,Male,133.0,75.0,None
+740,60,Female,131.0,99.0,Chronic Kidney Disease
+741,18,Female,,119.0,Cardiovascular Disease
+742,25,Female,108.0,84.0,None
+743,35,Male,122.0,123.0,None
+744,45,Male,150.0,139.0,Diabetes
+745,52,Female,95.0,68.0,Diabetes
+746,34,Female,90.0,70.0,Chronic Kidney Disease
+747,47,Female,123.0,86.0,Hyperlipidemia
+748,33,Male,121.0,98.0,Hypertension
+749,35,Male,123.0,76.0,Hyperlipidemia
+750,23,Female,124.0,135.0,Hyperlipidemia
+751,31,Female,115.0,102.0,Chronic Kidney Disease
+752,24,Female,149.0,91.0,Cardiovascular Disease
+753,30,Female,87.0,58.0,Chronic Kidney Disease
+754,60,Female,103.0,60.0,Chronic Kidney Disease
+755,30,Female,117.0,97.0,None
+756,84,Male,87.0,47.0,None
+757,52,Female,116.0,121.0,None
+758,47,Male,153.0,85.0,Hypertension
+759,32,Female,120.0,238.0,Cardiovascular Disease
+760,55,Female,124.0,,Cardiovascular Disease
+761,36,Male,94.0,85.0,None
+762,46,Male,107.0,87.0,Hyperlipidemia
+763,83,Male,112.0,121.0,Hypertension
+764,43,Male,113.0,150.0,Hyperlipidemia
+765,62,Female,145.0,55.0,Diabetes
+766,34,Male,131.0,52.0,Cardiovascular Disease
+767,44,Female,97.0,74.0,Cardiovascular Disease
+768,71,Male,124.0,107.0,Hyperlipidemia
+769,35,Female,129.0,104.0,Hypertension
+770,72,Female,142.0,124.0,Cardiovascular Disease
+771,55,Female,151.0,62.0,Hyperlipidemia
+772,36,Female,99.0,44.0,Chronic Kidney Disease
+773,54,Female,,116.0,Chronic Kidney Disease
+774,59,Female,94.0,70.0,Hypertension
+775,54,Male,115.0,49.0,Hyperlipidemia
+776,21,Female,129.0,94.0,Chronic Kidney Disease
+777,34,Male,139.0,114.0,Hypertension
+778,41,Male,118.0,86.0,None
+779,43,Female,113.0,78.0,Hypertension
+780,54,Male,123.0,85.0,Diabetes
+781,47,Female,103.0,80.0,None
+782,24,Male,161.0,60.0,Hyperlipidemia
+783,50,Female,87.0,72.0,None
+784,54,Male,123.0,105.0,None
+785,53,Female,160.0,99.0,Hyperlipidemia
+786,61,Female,120.0,94.0,Hyperlipidemia
+787,57,Female,116.0,66.0,Chronic Kidney Disease
+788,51,Female,112.0,85.0,Diabetes
+789,43,Male,116.0,46.0,Hyperlipidemia
+790,20,Female,147.0,94.0,Cardiovascular Disease
+791,51,Male,75.0,138.0,Cardiovascular Disease
+792,48,Male,150.0,57.0,Diabetes
+793,49,Male,91.0,75.0,Hypertension
+794,25,Female,114.0,99.0,Hypertension
+795,28,Male,111.0,131.0,Cardiovascular Disease
+796,60,Male,131.0,78.0,Hyperlipidemia
+797,44,Male,88.0,73.0,Diabetes
+798,55,Female,129.0,49.0,Hypertension
+799,45,Female,,92.0,Hypertension
+800,45,Male,92.0,166.0,None
+801,59,Female,123.0,97.0,Cardiovascular Disease
+802,37,Female,106.0,89.0,Hyperlipidemia
+803,46,Male,128.0,99.0,Diabetes
+804,38,Male,120.0,89.0,Hypertension
+805,38,Female,,70.0,None
+806,40,Male,129.0,115.0,Cardiovascular Disease
+807,48,Female,156.0,96.0,Cardiovascular Disease
+808,37,Female,116.0,90.0,Diabetes
+809,63,Female,134.0,67.0,Hypertension
+810,31,Female,94.0,133.0,Diabetes
+811,42,Female,100.0,109.0,Diabetes
+812,38,Female,129.0,76.0,Chronic Kidney Disease
+813,66,Male,149.0,121.0,None
+814,47,Male,127.0,77.0,Cardiovascular Disease
+815,60,Female,113.0,71.0,Chronic Kidney Disease
+816,22,Female,119.0,71.0,Hyperlipidemia
+817,49,Female,94.0,52.0,Cardiovascular Disease
+818,58,Male,132.0,103.0,Cardiovascular Disease
+819,46,Female,137.0,51.0,None
+820,60,Male,110.0,62.0,Hyperlipidemia
+821,37,Female,110.0,48.0,Hypertension
+822,66,Female,125.0,87.0,Hyperlipidemia
+823,79,Male,111.0,86.0,Hypertension
+824,39,Male,118.0,81.0,Hyperlipidemia
+825,38,Female,161.0,65.0,Diabetes
+826,66,Female,115.0,63.0,Hyperlipidemia
+827,68,Female,112.0,103.0,Chronic Kidney Disease
+828,37,Male,107.0,76.0,Chronic Kidney Disease
+829,38,Male,134.0,98.0,None
+830,40,Male,116.0,69.0,Hypertension
+831,24,Male,107.0,95.0,Cardiovascular Disease
+832,31,Male,146.0,133.0,None
+833,29,Male,148.0,107.0,Chronic Kidney Disease
+834,33,Female,107.0,79.0,Chronic Kidney Disease
+835,44,Female,82.0,97.0,Hypertension
+836,48,Male,140.0,83.0,Chronic Kidney Disease
+837,68,Female,106.0,90.0,Chronic Kidney Disease
+838,30,Female,135.0,81.0,Hypertension
+839,59,Male,80.0,85.0,Chronic Kidney Disease
+840,41,Female,137.0,95.0,Cardiovascular Disease
+841,44,Male,95.0,66.0,Diabetes
+842,55,Male,134.0,66.0,None
+843,28,Female,120.0,59.0,Cardiovascular Disease
+844,50,Male,100.0,55.0,Cardiovascular Disease
+845,47,Male,111.0,62.0,Diabetes
+846,52,Male,133.0,94.0,None
+847,49,Male,122.0,68.0,Cardiovascular Disease
+848,81,Male,131.0,105.0,
+849,35,Male,,90.0,Diabetes
+850,37,Male,88.0,49.0,None
+851,35,Male,152.0,109.0,Hyperlipidemia
+852,36,Female,122.0,114.0,Hypertension
+853,35,Female,,66.0,Chronic Kidney Disease
+854,62,Female,93.0,102.0,Diabetes
+855,66,Male,116.0,69.0,Hypertension
+856,36,Male,,92.0,Hyperlipidemia
+857,32,Female,117.0,61.0,Cardiovascular Disease
+858,52,Female,150.0,52.0,Cardiovascular Disease
+859,36,Female,90.0,80.0,None
+860,54,Male,119.0,86.0,Diabetes
+861,48,Female,94.0,79.0,Diabetes
+862,22,Female,127.0,63.0,None
+863,68,Male,137.0,79.0,Hypertension
+864,71,Female,111.0,97.0,Cardiovascular Disease
+865,35,Male,67.0,88.0,Cardiovascular Disease
+866,39,Male,123.0,95.0,Diabetes
+867,49,Male,128.0,73.0,Diabetes
+868,50,Female,128.0,127.0,None
+869,54,Female,144.0,63.0,Hyperlipidemia
+870,75,Male,,104.0,
+871,42,Female,133.0,128.0,Chronic Kidney Disease
+872,33,Female,143.0,103.0,Hyperlipidemia
+873,24,Female,84.0,84.0,Hyperlipidemia
+874,34,Female,126.0,76.0,Diabetes
+875,44,Male,109.0,122.0,Diabetes
+876,71,Female,,58.0,
+877,37,Male,126.0,67.0,Hyperlipidemia
+878,48,Male,110.0,79.0,Hypertension
+879,44,Female,106.0,130.0,Diabetes
+880,62,Male,120.0,100.0,Cardiovascular Disease
+881,82,Female,98.0,67.0,Hypertension
+882,37,Female,98.0,82.0,Cardiovascular Disease
+883,37,Male,133.0,74.0,Hypertension
+884,60,Male,97.0,72.0,Diabetes
+885,55,Male,,120.0,Chronic Kidney Disease
+886,72,Male,129.0,59.0,None
+887,53,Female,85.0,,Diabetes
+888,39,Female,106.0,115.0,Hyperlipidemia
+889,53,Female,143.0,124.0,Chronic Kidney Disease
+890,61,Male,100.0,78.0,Hyperlipidemia
+891,57,Male,110.0,86.0,Hypertension
+892,52,Male,129.0,58.0,Hyperlipidemia
+893,61,Female,,76.0,Chronic Kidney Disease
+894,62,Male,114.0,104.0,Chronic Kidney Disease
+895,65,Female,108.0,132.0,Diabetes
+896,54,Male,148.0,64.0,Cardiovascular Disease
+897,42,Female,154.0,80.0,Diabetes
+898,47,Female,139.0,86.0,Hypertension
+899,63,Male,121.0,59.0,Hyperlipidemia
+900,32,Male,103.0,107.0,Cardiovascular Disease
+901,50,Female,103.0,72.0,None
+902,39,Female,130.0,84.0,Chronic Kidney Disease
+903,45,Male,128.0,78.0,Cardiovascular Disease
+904,64,Male,148.0,71.0,Cardiovascular Disease
+905,47,Female,133.0,89.0,Diabetes
+906,45,Male,89.0,84.0,None
+907,24,Female,141.0,80.0,Chronic Kidney Disease
+908,56,Female,100.0,72.0,Hypertension
+909,54,Male,112.0,99.0,Hypertension
+910,77,Male,125.0,147.0,
+911,40,Male,159.0,93.0,Cardiovascular Disease
+912,48,Male,182.0,121.0,Hyperlipidemia
+913,48,Male,132.0,59.0,None
+914,68,Female,116.0,,Chronic Kidney Disease
+915,43,Female,130.0,64.0,Cardiovascular Disease
+916,49,Male,137.0,57.0,Hyperlipidemia
+917,54,Male,113.0,72.0,None
+918,47,Male,155.0,128.0,Chronic Kidney Disease
+919,38,Female,124.0,119.0,Hypertension
+920,47,Male,129.0,96.0,Hyperlipidemia
+921,61,Male,133.0,56.0,None
+922,29,Female,128.0,84.0,Hyperlipidemia
+923,46,Female,,98.0,Cardiovascular Disease
+924,34,Male,107.0,94.0,Diabetes
+925,62,Male,108.0,51.0,Hypertension
+926,22,Male,97.0,68.0,Cardiovascular Disease
+927,36,Female,128.0,88.0,Cardiovascular Disease
+928,50,Male,135.0,105.0,None
+929,68,Male,129.0,46.0,Hyperlipidemia
+930,44,Male,153.0,85.0,Hypertension
+931,36,Female,119.0,93.0,Cardiovascular Disease
+932,73,Female,133.0,116.0,None
+933,23,Male,98.0,110.0,Hypertension
+934,18,Male,112.0,107.0,Hyperlipidemia
+935,51,Female,133.0,70.0,Cardiovascular Disease
+936,37,Female,136.0,50.0,Chronic Kidney Disease
+937,29,Female,114.0,80.0,Cardiovascular Disease
+938,55,Female,118.0,121.0,Cardiovascular Disease
+939,48,Female,89.0,136.0,Hypertension
+940,36,Female,112.0,111.0,Hypertension
+941,25,Female,137.0,102.0,Hypertension
+942,58,Female,131.0,100.0,Hypertension
+943,54,Female,130.0,76.0,None
+944,43,Male,120.0,86.0,Diabetes
+945,72,Male,120.0,148.0,None
+946,28,Male,106.0,67.0,Cardiovascular Disease
+947,22,Female,133.0,146.0,None
+948,34,Male,128.0,81.0,Hyperlipidemia
+949,44,Female,129.0,133.0,Chronic Kidney Disease
+950,48,Female,109.0,59.0,Hypertension
+951,41,Male,76.0,107.0,Hyperlipidemia
+952,50,Female,141.0,72.0,Chronic Kidney Disease
+953,26,Male,110.0,58.0,Hyperlipidemia
+954,66,Male,102.0,96.0,Cardiovascular Disease
+955,43,Male,133.0,121.0,Hypertension
+956,61,Female,112.0,69.0,Hyperlipidemia
+957,50,Male,141.0,57.0,Cardiovascular Disease
+958,51,Female,132.0,87.0,Hypertension
+959,53,Male,133.0,87.0,Diabetes
+960,51,Male,92.0,106.0,Cardiovascular Disease
+961,54,Male,144.0,119.0,None
+962,64,Female,125.0,88.0,Hypertension
+963,47,Female,112.0,157.0,Hyperlipidemia
+964,55,Female,122.0,96.0,Chronic Kidney Disease
+965,43,Male,84.0,81.0,Hyperlipidemia
+966,66,Male,128.0,55.0,None
+967,34,Female,99.0,83.0,None
+968,72,Female,92.0,81.0,Hyperlipidemia
+969,44,Female,89.0,120.0,Chronic Kidney Disease
+970,23,Female,142.0,103.0,Hypertension
+971,46,Female,107.0,63.0,Cardiovascular Disease
+972,34,Female,150.0,94.0,None
+973,57,Male,109.0,110.0,None
+974,35,Female,,142.0,None
+975,38,Male,97.0,117.0,Chronic Kidney Disease
+976,18,Male,144.0,,Diabetes
+977,38,Female,116.0,91.0,Chronic Kidney Disease
+978,18,Female,109.0,101.0,Hypertension
+979,21,Male,123.0,130.0,Hypertension
+980,56,Female,130.0,60.0,Hypertension
+981,56,Female,142.0,81.0,Hypertension
+982,51,Male,148.0,71.0,Hypertension
+983,30,Male,112.0,100.0,Hyperlipidemia
+984,44,Male,93.0,130.0,None
+985,44,Female,111.0,75.0,Chronic Kidney Disease
+986,27,Male,125.0,43.0,Hyperlipidemia
+987,67,Female,100.0,79.0,Chronic Kidney Disease
+988,58,Male,100.0,118.0,Diabetes
+989,41,Male,126.0,105.0,Cardiovascular Disease
+990,45,Male,,102.0,None
+991,48,Female,120.0,82.0,Diabetes
+992,18,Female,104.0,61.0,Hyperlipidemia
+993,41,Male,115.0,105.0,Cardiovascular Disease
+994,34,Male,101.0,,Diabetes
+995,29,Male,137.0,173.0,Chronic Kidney Disease
+996,40,Female,140.0,106.0,Cardiovascular Disease
+997,71,Male,83.0,75.0,Chronic Kidney Disease
+998,54,Female,101.0,74.0,Diabetes
+999,36,Male,90.0,87.0,Hyperlipidemia
+1000,53,Male,106.0,83.0,Chronic Kidney Disease
