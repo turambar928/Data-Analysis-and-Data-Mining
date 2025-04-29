@@ -1,0 +1,5 @@
+,Normal,Prediabetes,Diabetes,Poorly Controlled
+Normal,0.0,0.0,0.0,0.0
+Prediabetes,0.0,0.0,0.0,0.0
+Diabetes,0.0,1.0,0.0,0.0
+Poorly Controlled,0.0,0.0,0.0,1.0

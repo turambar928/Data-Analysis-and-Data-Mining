@@ -1,0 +1,6 @@
+Trajectory,Count,Percentage
+Severe Hyperglycemia → Diabetes,257,22.68314210061783
+Severe Hyperglycemia → Severe Hyperglycemia,119,10.503089143865843
+Diabetes → Diabetes,110,9.70873786407767
+Severe Hyperglycemia → Prediabetes,79,6.972639011473963
+Diabetes → Prediabetes,67,5.913503971756398
