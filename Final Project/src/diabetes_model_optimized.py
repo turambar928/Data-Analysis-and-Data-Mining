@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Optimized Diabetes Prediction Model
-==================================
+Optimized Diabetes Prediction Model - Complete Version
+=====================================================
 
 Focused on Dataset 2 (Lab Results) for optimal diabetes prediction.
 Primary evaluation metric: F1-Score (as required)
@@ -56,17 +57,17 @@ class OptimizedDiabetesPredictor:
         print("\nLoading lab results dataset...")
         try:
             df = pd.read_excel("../data/fina_project_data02.xlsx")
-            print(f"�?Dataset loaded: {df.shape}")
+            print(f"✓ Dataset loaded: {df.shape}")
             
             # Key diabetes-related features
             diabetes_features = [
-                '糖化血红蛋�?,  # HbA1c - PRIMARY diabetes indicator
-                '葡萄�?,        # Fasting glucose
-                '葡萄�?餐后2小时)',  # Post-meal glucose
-                '胰岛�?,        # Insulin
-                'C�?',          # C-peptide
-                '胰岛素（餐后2小时�?,  # Post-meal insulin
-                'C肽（餐后2小时�?,     # Post-meal C-peptide
+                '糖化血红蛋白',  # HbA1c - PRIMARY diabetes indicator
+                '葡萄糖',        # Fasting glucose
+                '葡萄糖(餐后2小时)',  # Post-meal glucose
+                '胰岛素',        # Insulin
+                'C肽1',          # C-peptide
+                '胰岛素（餐后2小时）',  # Post-meal insulin
+                'C肽（餐后2小时）',     # Post-meal C-peptide
                 '总胆固醇',      # Total cholesterol
                 '甘油三酯',      # Triglycerides
                 '高密度脂蛋白',  # HDL
@@ -78,62 +79,59 @@ class OptimizedDiabetesPredictor:
             
             # Select available features
             available_features = [col for col in diabetes_features if col in df.columns]
-            print(f"Available diabetes-related features: {len(available_features)}")
+            print(f"✓ Available diabetes features: {len(available_features)}")
             
             # Create working dataset
-            df_work = df[['病人姓名'] + available_features].copy()
+            df_work = df[['病人姓名', '入院时间'] + available_features].copy()
             
             # Create diabetes target based on HbA1c levels
             # Medical standard: HbA1c >= 6.5% indicates diabetes
-            if '糖化血红蛋�? in df_work.columns:
-                df_work['diabetes_target'] = (df_work['糖化血红蛋�?] >= 6.5).astype(int)
-                print(f"�?Created diabetes target based on HbA1c >= 6.5%")
+            if '糖化血红蛋白' in df_work.columns:
+                df_work['diabetes_target'] = (df_work['糖化血红蛋白'] >= 6.5).astype(int)
+                print(f"✓ Created diabetes target based on HbA1c >= 6.5%")
                 
                 # Remove rows with missing HbA1c
-                df_work = df_work.dropna(subset=['糖化血红蛋�?])
-                print(f"�?Rows with valid HbA1c: {len(df_work)}")
+                df_work = df_work.dropna(subset=['糖化血红蛋白'])
+                print(f"✓ Rows with valid HbA1c: {len(df_work)}")
                 
                 # Check target distribution
                 target_dist = df_work['diabetes_target'].value_counts()
-                print(f"�?Target distribution:")
+                print(f"✓ Target distribution:")
                 print(f"   No Diabetes (0): {target_dist.get(0, 0)}")
                 print(f"   Diabetes (1): {target_dist.get(1, 0)}")
                 
                 return df_work
             else:
-                print("�?HbA1c not available - cannot create reliable diabetes target")
+                print("✗ HbA1c not available - cannot create reliable diabetes target")
                 return None
                 
         except Exception as e:
-            print(f"�?Error loading dataset: {e}")
+            print(f"✗ Error loading dataset: {e}")
             return None
     
     def preprocess_features(self, df):
         """
-        Preprocess features for machine learning.
+        Preprocess features for model training.
         """
-        print(f"\n{'='*40}")
+        print(f"\n{'='*50}")
         print("FEATURE PREPROCESSING")
-        print(f"{'='*40}")
+        print(f"{'='*50}")
         
         # Separate features and target
-        exclude_cols = ['病人姓名', 'diabetes_target']
-        feature_cols = [col for col in df.columns if col not in exclude_cols]
-        
+        feature_cols = [col for col in df.columns if col not in ['病人姓名', '入院时间', 'diabetes_target']]
         X = df[feature_cols].copy()
         y = df['diabetes_target'].copy()
         
-        print(f"Initial features: {X.shape[1]}")
-        print(f"Initial samples: {X.shape[0]}")
+        print(f"Original features: {len(feature_cols)}")
+        print(f"Original samples: {len(X)}")
         
-        # Handle missing values
-        print("Handling missing values...")
+        # Remove features with too many missing values (>50%)
+        missing_threshold = 0.5
+        missing_ratios = X.isnull().sum() / len(X)
+        features_to_keep = missing_ratios[missing_ratios <= missing_threshold].index
+        X = X[features_to_keep]
         
-        # Remove features with >70% missing values
-        missing_pct = X.isnull().sum() / len(X)
-        cols_to_keep = missing_pct[missing_pct <= 0.7].index
-        X = X[cols_to_keep]
-        print(f"Features after removing high-missing columns: {X.shape[1]}")
+        print(f"Features after removing high missing: {len(features_to_keep)}")
         
         # Fill remaining missing values with median
         for col in X.columns:
@@ -172,7 +170,6 @@ class OptimizedDiabetesPredictor:
         
         # Calculate class weights for imbalanced data
         class_counts = y_train.value_counts()
-        class_weight = len(y_train) / (2 * class_counts)
         
         # Define models optimized for F1-Score
         models_config = {
@@ -242,7 +239,7 @@ class OptimizedDiabetesPredictor:
             }
             
             print(f"CV F1-Score: {cv_f1_scores.mean():.4f} (+/- {cv_f1_scores.std()*2:.4f})")
-            print(f"Test F1-Score: {f1:.4f} �?)
+            print(f"Test F1-Score: {f1:.4f} ⭐")
             print(f"Test Accuracy: {accuracy:.4f}")
             print(f"Test Precision: {precision:.4f}")
             print(f"Test Recall: {recall:.4f}")
@@ -262,28 +259,28 @@ class OptimizedDiabetesPredictor:
         return X_test_scaled, y_test
     
     def generate_comprehensive_report(self, X_test, y_test):
-        """
+        '''
         Generate comprehensive evaluation report.
-        """
+        '''
         print(f"\n{'='*60}")
-        print("📊 COMPREHENSIVE EVALUATION REPORT")
+        print("?? COMPREHENSIVE EVALUATION REPORT")
         print(f"{'='*60}")
         
         # Results summary
         results_df = pd.DataFrame(self.results).T
         results_df = results_df.round(4)
-        print("\n📈 Model Performance Summary (F1-Score Focus):")
+        print("\n?? Model Performance Summary (F1-Score Focus):")
         print(results_df.to_string())
         
         # Best model detailed evaluation
         best_model = self.best_model[1]
         y_pred = best_model.predict(X_test)
         
-        print(f"\n🔍 Detailed Evaluation - {self.best_model[0]}:")
+        print(f"\n?? Detailed Evaluation - {self.best_model[0]}:")
         print("-" * 50)
         print(classification_report(y_test, y_pred, target_names=['No Diabetes', 'Diabetes']))
         
-        print("\n📋 Confusion Matrix:")
+        print("\n?? Confusion Matrix:")
         cm = confusion_matrix(y_test, y_pred)
         print(f"                 Predicted")
         print(f"                No    Yes")
@@ -292,7 +289,7 @@ class OptimizedDiabetesPredictor:
         
         # Feature importance
         if hasattr(best_model, 'feature_importances_'):
-            print(f"\n🔝 Top 10 Most Important Features:")
+            print(f"\n?? Top 10 Most Important Features:")
             feature_importance = pd.DataFrame({
                 'Feature': self.feature_names,
                 'Importance': best_model.feature_importances_
@@ -304,21 +301,21 @@ class OptimizedDiabetesPredictor:
         return results_df
     
     def predict_new_cases(self, test_cases):
-        """
+        '''
         Predict diabetes for new test cases.
-        """
+        '''
         if self.best_model is None:
             print("No trained model available!")
             return None
         
         print(f"\n{'='*60}")
-        print("🔮 TESTING NEW CASES")
+        print("?? TESTING NEW CASES")
         print(f"{'='*60}")
         
         model = self.best_model[1]
         
         for i, case in enumerate(test_cases, 1):
-            print(f"\n📋 Test Case {i}:")
+            print(f"\n?? Test Case {i}:")
             
             # Create DataFrame
             case_df = pd.DataFrame([case])
@@ -339,17 +336,17 @@ class OptimizedDiabetesPredictor:
             probability = model.predict_proba(case_scaled)[0] if hasattr(model, 'predict_proba') else None
             
             print(f"   Input: {case}")
-            print(f"   Prediction: {'🔴 DIABETES' if prediction == 1 else '🟢 NO DIABETES'}")
+            print(f"   Prediction: {'?? DIABETES' if prediction == 1 else '?? NO DIABETES'}")
             if probability is not None:
                 print(f"   Confidence: {probability[1]:.1%} diabetes risk")
         
         return True
 
 def main():
-    """
+    '''
     Main execution function.
-    """
-    print("🩺 OPTIMIZED DIABETES PREDICTION MODEL")
+    '''
+    print("?? OPTIMIZED DIABETES PREDICTION MODEL")
     print("Primary Evaluation Metric: F1-Score")
     print("Medical Standard: HbA1c >= 6.5% = Diabetes")
     print("="*60)
@@ -360,13 +357,13 @@ def main():
     # Load and prepare data
     df = predictor.load_and_prepare_lab_data()
     if df is None:
-        print("�?Failed to load data")
+        print("? Failed to load data")
         return None
     
     # Preprocess features
     X, y = predictor.preprocess_features(df)
     if X is None:
-        print("�?Failed to preprocess data")
+        print("? Failed to preprocess data")
         return None
     
     # Train models
@@ -378,28 +375,28 @@ def main():
     # Test new cases
     test_cases = [
         {
-            '糖化血红蛋�?: 7.5,  # High HbA1c - likely diabetes
-            '葡萄�?: 9.2,        # High glucose
-            '胰岛�?: 18.0,       # High insulin
+            '糖化血红蛋白': 7.5,  # High HbA1c - likely diabetes
+            '葡萄糖': 9.2,        # High glucose
+            '胰岛素': 18.0,       # High insulin
         },
         {
-            '糖化血红蛋�?: 5.8,  # Normal HbA1c - likely no diabetes
-            '葡萄�?: 5.5,        # Normal glucose
-            '胰岛�?: 8.0,        # Normal insulin
+            '糖化血红蛋白': 5.8,  # Normal HbA1c - likely no diabetes
+            '葡萄糖': 5.5,        # Normal glucose
+            '胰岛素': 8.0,        # Normal insulin
         },
         {
-            '糖化血红蛋�?: 6.7,  # Borderline HbA1c
-            '葡萄�?: 7.8,        # Elevated glucose
-            '胰岛�?: 12.0,       # Elevated insulin
+            '糖化血红蛋白': 6.7,  # Borderline HbA1c
+            '葡萄糖': 7.8,        # Elevated glucose
+            '胰岛素': 12.0,       # Elevated insulin
         }
     ]
     
     predictor.predict_new_cases(test_cases)
     
     print(f"\n{'='*60}")
-    print("�?DIABETES PREDICTION MODEL COMPLETED")
-    print(f"🎯 Best F1-Score: {predictor.best_f1_score:.4f}")
-    print(f"🏆 Best Model: {predictor.best_model[0]}")
+    print("? DIABETES PREDICTION MODEL COMPLETED")
+    print(f"?? Best F1-Score: {predictor.best_f1_score:.4f}")
+    print(f"?? Best Model: {predictor.best_model[0]}")
     print("="*60)
     
     return predictor, results_df

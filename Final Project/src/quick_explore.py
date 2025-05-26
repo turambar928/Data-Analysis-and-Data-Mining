@@ -1,3 +1,5 @@
+Ôªø#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
 Quick Data Exploration for Large Excel Files
@@ -17,7 +19,7 @@ def quick_explore(file_path, dataset_name, nrows=1000):
     try:
         # Load only first 1000 rows for quick exploration
         df = pd.read_excel(file_path, nrows=nrows)
-        print(f"‚ú?Loaded first {nrows} rows from {dataset_name}")
+        print(f"ÈâÅ?Loaded first {nrows} rows from {dataset_name}")
         print(f"  Sample shape: {df.shape}")
         
         print(f"\nColumns ({len(df.columns)}):")
@@ -61,7 +63,7 @@ def quick_explore(file_path, dataset_name, nrows=1000):
         return df, found_targets
         
     except Exception as e:
-        print(f"‚ú?Error: {e}")
+        print(f"ÈâÅ?Error: {e}")
         return None, []
 
 def main():
@@ -85,3 +87,4 @@ def main():
 
 if __name__ == "__main__":
     d1, d2 = main()
+

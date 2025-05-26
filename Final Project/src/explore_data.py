@@ -1,3 +1,5 @@
+ï»¿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
 Data Exploration Script for Diabetes Prediction
@@ -32,7 +34,7 @@ def explore_dataset(file_path, dataset_name):
     try:
         # Load the dataset
         df = pd.read_excel(file_path)
-        print(f"âœ?Successfully loaded {dataset_name}")
+        print(f"é‰?Successfully loaded {dataset_name}")
         print(f"  Shape: {df.shape}")
         
         # Basic information
@@ -91,7 +93,7 @@ def explore_dataset(file_path, dataset_name):
         return df
         
     except Exception as e:
-        print(f"âœ?Error loading {dataset_name}: {e}")
+        print(f"é‰?Error loading {dataset_name}: {e}")
         return None
 
 def main():
@@ -115,17 +117,18 @@ def main():
     print(f"{'='*60}")
     
     if df1 is not None and df2 is not None:
-        print("âœ?Both datasets loaded successfully")
-        print("âœ?Proceed with data preprocessing and model development")
-        print("âœ?Consider combining datasets if they have compatible structure")
-        print("âœ?Identify the correct target variable for diabetes prediction")
+        print("é‰?Both datasets loaded successfully")
+        print("é‰?Proceed with data preprocessing and model development")
+        print("é‰?Consider combining datasets if they have compatible structure")
+        print("é‰?Identify the correct target variable for diabetes prediction")
     elif df1 is not None or df2 is not None:
-        print("âš?Only one dataset loaded successfully")
-        print("âœ?Proceed with available dataset")
+        print("éˆ¿?Only one dataset loaded successfully")
+        print("é‰?Proceed with available dataset")
     else:
-        print("âœ?Failed to load datasets - check file paths and formats")
+        print("é‰?Failed to load datasets - check file paths and formats")
     
     return df1, df2
 
 if __name__ == "__main__":
     dataset1, dataset2 = main()
+

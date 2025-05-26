@@ -1,3 +1,5 @@
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 """
 Presentation Charts Generator
@@ -131,7 +133,7 @@ def create_feature_importance_chart():
     fig, ax = plt.subplots(figsize=(10, 6))
     
     # Since only HbA1c was used (100% importance)
-    features = ['糖化血红蛋白\n(HbA1c)', 'Other Features\n(Removed due to\nhigh missing values)']
+    features = ['绯栧寲琛€绾㈣泲鐧絓n(HbA1c)', 'Other Features\n(Removed due to\nhigh missing values)']
     importance = [1.0, 0.0]
     colors = ['#2E8B57', '#D3D3D3']
     
@@ -225,33 +227,33 @@ def create_project_summary_infographic():
         ax.text(x, 7.2, value, ha='center', va='center', fontsize=14, fontweight='bold')
     
     # Dataset info
-    ax.text(1, 6.5, '📊 Dataset Information:', fontsize=14, fontweight='bold')
-    ax.text(1, 6, '�?27,351 total records', fontsize=12)
-    ax.text(1, 5.7, '�?2,197 valid cases with HbA1c', fontsize=12)
-    ax.text(1, 5.4, '�?82.2% diabetes prevalence', fontsize=12)
+    ax.text(1, 6.5, '馃搳 Dataset Information:', fontsize=14, fontweight='bold')
+    ax.text(1, 6, '鈥?27,351 total records', fontsize=12)
+    ax.text(1, 5.7, '鈥?2,197 valid cases with HbA1c', fontsize=12)
+    ax.text(1, 5.4, '鈥?82.2% diabetes prevalence', fontsize=12)
     
     # Model info
-    ax.text(5.5, 6.5, '🤖 Best Model:', fontsize=14, fontweight='bold')
-    ax.text(5.5, 6, '�?Random Forest Classifier', fontsize=12)
-    ax.text(5.5, 5.7, '�?Medical standard: HbA1c �?6.5%', fontsize=12)
-    ax.text(5.5, 5.4, '�?Perfect classification performance', fontsize=12)
+    ax.text(5.5, 6.5, '馃 Best Model:', fontsize=14, fontweight='bold')
+    ax.text(5.5, 6, '鈥?Random Forest Classifier', fontsize=12)
+    ax.text(5.5, 5.7, '鈥?Medical standard: HbA1c 鈮?6.5%', fontsize=12)
+    ax.text(5.5, 5.4, '鈥?Perfect classification performance', fontsize=12)
     
     # Key features
-    ax.text(1, 4.5, '🔬 Key Features:', fontsize=14, fontweight='bold')
-    ax.text(1, 4, '�?Primary: 糖化血红蛋�?(HbA1c)', fontsize=12)
-    ax.text(1, 3.7, '�?Supporting: Glucose, Insulin levels', fontsize=12)
-    ax.text(1, 3.4, '�?Medical gold standard approach', fontsize=12)
+    ax.text(1, 4.5, '馃敩 Key Features:', fontsize=14, fontweight='bold')
+    ax.text(1, 4, '鈥?Primary: 绯栧寲琛€绾㈣泲鐧?(HbA1c)', fontsize=12)
+    ax.text(1, 3.7, '鈥?Supporting: Glucose, Insulin levels', fontsize=12)
+    ax.text(1, 3.4, '鈥?Medical gold standard approach', fontsize=12)
     
     # Test results
-    ax.text(5.5, 4.5, '🔮 Test Results:', fontsize=14, fontweight='bold')
-    ax.text(5.5, 4, '�?3 new cases tested successfully', fontsize=12)
-    ax.text(5.5, 3.7, '�?100% prediction confidence', fontsize=12)
-    ax.text(5.5, 3.4, '�?Clinically validated results', fontsize=12)
+    ax.text(5.5, 4.5, '馃敭 Test Results:', fontsize=14, fontweight='bold')
+    ax.text(5.5, 4, '鈥?3 new cases tested successfully', fontsize=12)
+    ax.text(5.5, 3.7, '鈥?100% prediction confidence', fontsize=12)
+    ax.text(5.5, 3.4, '鈥?Clinically validated results', fontsize=12)
     
     # Bottom banner
     rect = Rectangle((0.5, 1), 9, 1.5, facecolor='#2E8B57', alpha=0.8)
     ax.add_patch(rect)
-    ax.text(5, 2, '�?PROJECT REQUIREMENTS FULFILLED', 
+    ax.text(5, 2, '鉁?PROJECT REQUIREMENTS FULFILLED', 
             ha='center', va='center', fontsize=16, fontweight='bold', color='white')
     ax.text(5, 1.5, 'F1-Score: 1.0000 | Model Performance: 80% | Documentation: 20%', 
             ha='center', va='center', fontsize=12, color='white')
@@ -263,35 +265,36 @@ def create_project_summary_infographic():
 def main():
     """Generate all presentation charts."""
     
-    print("🎨 Generating Presentation Charts...")
+    print("馃帹 Generating Presentation Charts...")
     print("=" * 50)
     
     try:
-        print("📊 Creating model performance comparison...")
+        print("馃搳 Creating model performance comparison...")
         create_model_performance_chart()
         
-        print("📈 Creating data distribution analysis...")
+        print("馃搱 Creating data distribution analysis...")
         create_data_distribution_chart()
         
-        print("🔍 Creating feature importance chart...")
+        print("馃攳 Creating feature importance chart...")
         create_feature_importance_chart()
         
-        print("🔮 Creating test cases visualization...")
+        print("馃敭 Creating test cases visualization...")
         create_test_cases_visualization()
         
-        print("📋 Creating project summary infographic...")
+        print("馃搵 Creating project summary infographic...")
         create_project_summary_infographic()
         
-        print("\n�?All charts generated successfully!")
-        print("📁 Files saved:")
-        print("   �?model_performance_comparison.png")
-        print("   �?data_analysis_overview.png")
-        print("   �?feature_importance.png")
-        print("   �?test_cases_predictions.png")
-        print("   �?project_summary_infographic.png")
+        print("\n鉁?All charts generated successfully!")
+        print("馃搧 Files saved:")
+        print("   鈥?model_performance_comparison.png")
+        print("   鈥?data_analysis_overview.png")
+        print("   鈥?feature_importance.png")
+        print("   鈥?test_cases_predictions.png")
+        print("   鈥?project_summary_infographic.png")
         
     except Exception as e:
-        print(f"�?Error generating charts: {e}")
+        print(f"鉂?Error generating charts: {e}")
 
 if __name__ == "__main__":
     main()
+
