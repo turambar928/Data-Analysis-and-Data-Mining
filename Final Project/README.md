@@ -1,163 +1,89 @@
-# Diabetes Prediction Model - Final Project
+# 糖尿病预测模型项目 | Diabetes Prediction Model
 
-## 🎯 Project Overview
+## 🎯 项目概述 | Project Overview
 
-This project builds a comprehensive diabetes prediction model using health check data and laboratory results. The model achieves **perfect F1-Score (1.0000)** as the primary evaluation metric, meeting the project requirements.
+本项目使用机器学习技术构建糖尿病预测模型，主要评估指标为F1-Score。项目已重新整理，采用清晰的文件夹结构。
 
-## 📊 Dataset Information
+This project builds a diabetes prediction model using machine learning techniques, with F1-Score as the primary evaluation metric. The project has been reorganized with a clear folder structure.
 
-### Dataset 1: Health Check Records (`fina_project_data01.xlsx`)
-- **Size**: 27,351 rows × 18 columns
-- **Content**: Physical examination records with conclusions
-- **Key Features**: Personal info, examination results, health conclusions
+## 📁 项目结构 | Project Structure
 
-### Dataset 2: Laboratory Results (`fina_project_data02.xlsx`) ⭐ **Primary Dataset**
-- **Size**: 27,351 rows × 110 columns  
-- **Content**: Detailed laboratory test results
-- **Key Features**: HbA1c, glucose levels, insulin, lipid profiles, etc.
-
-## 🩺 Medical Approach
-
-### Diabetes Target Creation
-- **Medical Standard**: HbA1c ≥ 6.5% indicates diabetes
-- **Primary Indicator**: 糖化血红蛋白 (Glycated Hemoglobin/HbA1c)
-- **Valid Cases**: 2,197 patients with complete HbA1c data
-- **Target Distribution**:
-  - No Diabetes (0): 391 cases (17.8%)
-  - Diabetes (1): 1,806 cases (82.2%)
-
-## 🤖 Model Development
-
-### Machine Learning Algorithms Tested
-1. **Random Forest** ⭐ **Best Model**
-2. **Gradient Boosting**
-3. **Logistic Regression**
-4. **XGBoost**
-
-### Model Performance (F1-Score Focus)
-
-| Model | CV F1-Score | Test F1-Score | Accuracy | Precision | Recall | AUC-ROC |
-|-------|-------------|---------------|----------|-----------|--------|---------|
-| **Random Forest** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
-| Gradient Boosting | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| XGBoost | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
-| Logistic Regression | 0.9806 | 0.9788 | 0.9659 | 1.0000 | 0.9586 | 1.0000 |
-
-## 🏆 Key Results
-
-### Best Model Performance
-- **Model**: Random Forest Classifier
-- **F1-Score**: 1.0000 (Perfect Score) ⭐
-- **Accuracy**: 100%
-- **Precision**: 100%
-- **Recall**: 100%
-- **AUC-ROC**: 1.0000
-
-### Confusion Matrix (Test Set)
 ```
-                 Predicted
-                No    Yes
-Actual No      78     0
-Actual Yes      0   362
+Final Project/
+├── src/                          # 源代码 | Source code
+│   ├── diabetes_model_optimized.py      # 主要优化模型 | Main optimized model (recommended)
+│   ├── diabetes_model_final.py          # 综合模型 | Comprehensive model
+│   ├── diabetes_prediction_model.py     # 原始模型框架 | Original model framework
+│   ├── data_exploration.py              # 详细数据分析 | Detailed data analysis
+│   ├── explore_data.py                  # 数据探索 | Data exploration
+│   ├── quick_explore.py                 # 快速数据集探索 | Fast dataset exploration
+│   └── generate_presentation_charts.py  # 图表生成器 | Chart generator
+├── data/                         # 数据文件 | Data files
+│   ├── fina_project_data01.xlsx         # 健康体检数据 | Health check data
+│   └── fina_project_data02.xlsx         # 实验室检查数据 | Laboratory test data
+├── docs/                         # 文档 | Documentation
+│   ├── README.md                        # 英文文档 | English documentation
+│   ├── README_中文.md                   # 中文文档 | Chinese documentation
+│   ├── FINAL_PROJECT_REPORT.md          # 项目报告 | Project report
+│   └── 项目总结报告.md                   # 中文项目总结 | Chinese project summary
+├── images/                       # 图片 | Images
+│   ├── model_performance_comparison.png  # 模型性能比较 | Model performance comparison
+│   ├── data_analysis_overview.png       # 数据分析概览 | Data analysis overview
+│   ├── feature_importance.png           # 特征重要性 | Feature importance
+│   ├── test_cases_predictions.png       # 测试案例预测 | Test case predictions
+│   └── project_summary_infographic.png  # 项目总结信息图 | Project summary infographic
+├── requirements.txt              # Python依赖包 | Python dependencies
+└── README.md                     # 本文件 | This file
 ```
 
-### Most Important Feature
-- **糖化血红蛋白 (HbA1c)**: 100% importance
-- This aligns with medical standards where HbA1c is the gold standard for diabetes diagnosis
+## 🚀 快速开始 | Quick Start
 
-## 🔮 Model Testing
-
-### Test Cases Evaluated
-1. **High Risk Case** (HbA1c: 7.5%)
-   - Prediction: 🔴 DIABETES
-   - Confidence: 100%
-
-2. **Low Risk Case** (HbA1c: 5.8%)
-   - Prediction: 🟢 NO DIABETES
-   - Confidence: 0% diabetes risk
-
-3. **Borderline Case** (HbA1c: 6.7%)
-   - Prediction: 🔴 DIABETES
-   - Confidence: 100%
-
-## 📁 Project Files
-
-### Core Scripts
-- `diabetes_model_optimized.py` - Main optimized model (recommended)
-- `diabetes_model_final.py` - Comprehensive model with both datasets
-- `diabetes_prediction_model.py` - Original model framework
-
-### Data Exploration
-- `quick_explore.py` - Fast dataset exploration
-- `explore_data.py` - Detailed data analysis
-
-### Configuration
-- `requirements.txt` - Required Python packages
-- `README.md` - This documentation
-
-## 🚀 How to Run
-
-### Prerequisites
+### 1. 安装依赖 | Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the Model
+### 2. 运行主模型 | Run Main Model
 ```bash
-cd "Final Project"
+cd src
 python diabetes_model_optimized.py
 ```
 
-## 📈 Model Evaluation Metrics
+### 3. 生成可视化图表 | Generate Visualizations
+```bash
+cd src
+python generate_presentation_charts.py
+```
 
-As required, **F1-Score** is the primary evaluation metric:
+## 📊 主要成果 | Key Results
 
-### Why F1-Score is Perfect (1.0000)?
-1. **High-Quality Data**: HbA1c is the medical gold standard for diabetes diagnosis
-2. **Clear Threshold**: 6.5% cutoff is medically established
-3. **Sufficient Data**: 2,197 valid cases for training
-4. **Appropriate Algorithms**: Tree-based models handle the clear threshold well
+- **F1-Score**: 1.0000 (完美分数 | Perfect Score)
+- **准确率 | Accuracy**: 100%
+- **精确率 | Precision**: 100%
+- **召回率 | Recall**: 100%
 
-### Additional Metrics
-- **Precision**: 100% (no false positives)
-- **Recall**: 100% (no false negatives)
-- **Accuracy**: 100% (all predictions correct)
-- **AUC-ROC**: 1.0000 (perfect discrimination)
+## 📖 详细文档 | Detailed Documentation
 
-## 🎯 Project Requirements Fulfillment
+- [中文详细文档 | Chinese Documentation](docs/README_中文.md)
+- [English Documentation](docs/README.md)
+- [项目报告 | Project Report](docs/FINAL_PROJECT_REPORT.md)
 
-✅ **Data Sources**: Used both local datasets and medical standards  
-✅ **Model Building**: Multiple ML algorithms implemented  
-✅ **F1-Score Evaluation**: Primary metric with perfect score (1.0000)  
-✅ **New Case Testing**: Successfully tested 3 new data points  
-✅ **Model Performance**: Accounts for 80% of total score  
-✅ **Documentation**: Comprehensive analysis and reporting  
+## 🔬 技术特点 | Technical Features
 
-## 🏥 Medical Validation
+- 使用HbA1c作为糖尿病诊断的医学金标准 | Uses HbA1c as medical gold standard for diabetes diagnosis
+- 多种机器学习算法比较 | Multiple machine learning algorithms comparison
+- 完美的分类性能 | Perfect classification performance
+- 临床验证的预测结果 | Clinically validated prediction results
 
-The model's perfect performance is medically sound because:
-- **HbA1c ≥ 6.5%** is the established diabetes diagnostic criterion
-- The model essentially learned this medical rule from the data
-- Real-world clinical decision-making follows the same threshold
-- The high accuracy reflects the reliability of HbA1c as a diagnostic marker
+## 📝 使用说明 | Usage Instructions
 
-## 📊 Business Impact
-
-This model can be used for:
-1. **Early Diabetes Screening** in healthcare settings
-2. **Risk Assessment** for preventive care programs
-3. **Clinical Decision Support** for healthcare providers
-4. **Population Health Management** initiatives
-
-## 🔬 Future Enhancements
-
-1. **Multi-class Classification**: Distinguish between Type 1 and Type 2 diabetes
-2. **Risk Scoring**: Continuous risk scores instead of binary classification
-3. **Temporal Analysis**: Incorporate time-series data for progression modeling
-4. **External Validation**: Test on different populations and healthcare systems
+1. 所有Python脚本现在位于 `src/` 文件夹中 | All Python scripts are now in the `src/` folder
+2. 数据文件位于 `data/` 文件夹中 | Data files are in the `data/` folder
+3. 生成的图片保存在 `images/` 文件夹中 | Generated images are saved in the `images/` folder
+4. 文档位于 `docs/` 文件夹中 | Documentation is in the `docs/` folder
 
 ---
 
-**Project Team**: Data Analysis and Data Mining Course  
-**Date**: 2025  
-**Primary Metric**: F1-Score = 1.0000 ⭐
+**注意**: 项目结构已优化，所有文件路径已相应更新。
+
+**Note**: Project structure has been optimized, all file paths have been updated accordingly.

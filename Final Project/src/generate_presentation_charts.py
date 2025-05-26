@@ -63,7 +63,7 @@ def create_model_performance_chart():
         ax.tick_params(axis='x', rotation=45)
     
     plt.tight_layout()
-    plt.savefig('model_performance_comparison.png', dpi=300, bbox_inches='tight')
+    plt.savefig('../images/model_performance_comparison.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 def create_data_distribution_chart():
@@ -122,7 +122,7 @@ def create_data_distribution_chart():
     ax4.tick_params(axis='x', rotation=45)
     
     plt.tight_layout()
-    plt.savefig('data_analysis_overview.png', dpi=300, bbox_inches='tight')
+    plt.savefig('../images/data_analysis_overview.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 def create_feature_importance_chart():
@@ -152,7 +152,7 @@ def create_feature_importance_chart():
             transform=ax.transAxes, ha='center', fontsize=11, style='italic')
     
     plt.tight_layout()
-    plt.savefig('feature_importance.png', dpi=300, bbox_inches='tight')
+    plt.savefig('../images/feature_importance.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 def create_test_cases_visualization():
@@ -194,7 +194,7 @@ def create_test_cases_visualization():
                    fontsize=10)
     
     plt.tight_layout()
-    plt.savefig('test_cases_predictions.png', dpi=300, bbox_inches='tight')
+    plt.savefig('../images/test_cases_predictions.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 def create_project_summary_infographic():
@@ -226,38 +226,38 @@ def create_project_summary_infographic():
     
     # Dataset info
     ax.text(1, 6.5, 'üìä Dataset Information:', fontsize=14, fontweight='bold')
-    ax.text(1, 6, '‚Ä¢ 27,351 total records', fontsize=12)
-    ax.text(1, 5.7, '‚Ä¢ 2,197 valid cases with HbA1c', fontsize=12)
-    ax.text(1, 5.4, '‚Ä¢ 82.2% diabetes prevalence', fontsize=12)
+    ax.text(1, 6, '‚Ä?27,351 total records', fontsize=12)
+    ax.text(1, 5.7, '‚Ä?2,197 valid cases with HbA1c', fontsize=12)
+    ax.text(1, 5.4, '‚Ä?82.2% diabetes prevalence', fontsize=12)
     
     # Model info
     ax.text(5.5, 6.5, 'ü§ñ Best Model:', fontsize=14, fontweight='bold')
-    ax.text(5.5, 6, '‚Ä¢ Random Forest Classifier', fontsize=12)
-    ax.text(5.5, 5.7, '‚Ä¢ Medical standard: HbA1c ‚â• 6.5%', fontsize=12)
-    ax.text(5.5, 5.4, '‚Ä¢ Perfect classification performance', fontsize=12)
+    ax.text(5.5, 6, '‚Ä?Random Forest Classifier', fontsize=12)
+    ax.text(5.5, 5.7, '‚Ä?Medical standard: HbA1c ‚â?6.5%', fontsize=12)
+    ax.text(5.5, 5.4, '‚Ä?Perfect classification performance', fontsize=12)
     
     # Key features
     ax.text(1, 4.5, 'üî¨ Key Features:', fontsize=14, fontweight='bold')
-    ax.text(1, 4, '‚Ä¢ Primary: Á≥ñÂåñË°ÄÁ∫¢ËõãÁôΩ (HbA1c)', fontsize=12)
-    ax.text(1, 3.7, '‚Ä¢ Supporting: Glucose, Insulin levels', fontsize=12)
-    ax.text(1, 3.4, '‚Ä¢ Medical gold standard approach', fontsize=12)
+    ax.text(1, 4, '‚Ä?Primary: Á≥ñÂåñË°ÄÁ∫¢ËõãÁô?(HbA1c)', fontsize=12)
+    ax.text(1, 3.7, '‚Ä?Supporting: Glucose, Insulin levels', fontsize=12)
+    ax.text(1, 3.4, '‚Ä?Medical gold standard approach', fontsize=12)
     
     # Test results
     ax.text(5.5, 4.5, 'üîÆ Test Results:', fontsize=14, fontweight='bold')
-    ax.text(5.5, 4, '‚Ä¢ 3 new cases tested successfully', fontsize=12)
-    ax.text(5.5, 3.7, '‚Ä¢ 100% prediction confidence', fontsize=12)
-    ax.text(5.5, 3.4, '‚Ä¢ Clinically validated results', fontsize=12)
+    ax.text(5.5, 4, '‚Ä?3 new cases tested successfully', fontsize=12)
+    ax.text(5.5, 3.7, '‚Ä?100% prediction confidence', fontsize=12)
+    ax.text(5.5, 3.4, '‚Ä?Clinically validated results', fontsize=12)
     
     # Bottom banner
     rect = Rectangle((0.5, 1), 9, 1.5, facecolor='#2E8B57', alpha=0.8)
     ax.add_patch(rect)
-    ax.text(5, 2, '‚úÖ PROJECT REQUIREMENTS FULFILLED', 
+    ax.text(5, 2, '‚ú?PROJECT REQUIREMENTS FULFILLED', 
             ha='center', va='center', fontsize=16, fontweight='bold', color='white')
     ax.text(5, 1.5, 'F1-Score: 1.0000 | Model Performance: 80% | Documentation: 20%', 
             ha='center', va='center', fontsize=12, color='white')
     
     plt.tight_layout()
-    plt.savefig('project_summary_infographic.png', dpi=300, bbox_inches='tight')
+    plt.savefig('../images/project_summary_infographic.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 def main():
@@ -282,16 +282,16 @@ def main():
         print("üìã Creating project summary infographic...")
         create_project_summary_infographic()
         
-        print("\n‚úÖ All charts generated successfully!")
+        print("\n‚ú?All charts generated successfully!")
         print("üìÅ Files saved:")
-        print("   ‚Ä¢ model_performance_comparison.png")
-        print("   ‚Ä¢ data_analysis_overview.png")
-        print("   ‚Ä¢ feature_importance.png")
-        print("   ‚Ä¢ test_cases_predictions.png")
-        print("   ‚Ä¢ project_summary_infographic.png")
+        print("   ‚Ä?model_performance_comparison.png")
+        print("   ‚Ä?data_analysis_overview.png")
+        print("   ‚Ä?feature_importance.png")
+        print("   ‚Ä?test_cases_predictions.png")
+        print("   ‚Ä?project_summary_infographic.png")
         
     except Exception as e:
-        print(f"‚ùå Error generating charts: {e}")
+        print(f"‚ù?Error generating charts: {e}")
 
 if __name__ == "__main__":
     main()

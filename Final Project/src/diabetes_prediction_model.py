@@ -298,8 +298,8 @@ def main():
     diabetes_model = DiabetesPredictionModel()
     
     # Load data
-    data_path1 = "datasets/fina_project_data01.xlsx"
-    data_path2 = "datasets/fina_project_data02.xlsx"
+    data_path1 = "../data/fina_project_data01.xlsx"
+    data_path2 = "../data/fina_project_data02.xlsx"
     
     df = diabetes_model.load_data(data_path1, data_path2)
     if df is None:

@@ -55,18 +55,18 @@ class OptimizedDiabetesPredictor:
         
         print("\nLoading lab results dataset...")
         try:
-            df = pd.read_excel("datasets/fina_project_data02.xlsx")
-            print(f"✓ Dataset loaded: {df.shape}")
+            df = pd.read_excel("../data/fina_project_data02.xlsx")
+            print(f"�?Dataset loaded: {df.shape}")
             
             # Key diabetes-related features
             diabetes_features = [
-                '糖化血红蛋白',  # HbA1c - PRIMARY diabetes indicator
-                '葡萄糖',        # Fasting glucose
-                '葡萄糖(餐后2小时)',  # Post-meal glucose
-                '胰岛素',        # Insulin
-                'C肽1',          # C-peptide
-                '胰岛素（餐后2小时）',  # Post-meal insulin
-                'C肽（餐后2小时）',     # Post-meal C-peptide
+                '糖化血红蛋�?,  # HbA1c - PRIMARY diabetes indicator
+                '葡萄�?,        # Fasting glucose
+                '葡萄�?餐后2小时)',  # Post-meal glucose
+                '胰岛�?,        # Insulin
+                'C�?',          # C-peptide
+                '胰岛素（餐后2小时�?,  # Post-meal insulin
+                'C肽（餐后2小时�?,     # Post-meal C-peptide
                 '总胆固醇',      # Total cholesterol
                 '甘油三酯',      # Triglycerides
                 '高密度脂蛋白',  # HDL
@@ -85,27 +85,27 @@ class OptimizedDiabetesPredictor:
             
             # Create diabetes target based on HbA1c levels
             # Medical standard: HbA1c >= 6.5% indicates diabetes
-            if '糖化血红蛋白' in df_work.columns:
-                df_work['diabetes_target'] = (df_work['糖化血红蛋白'] >= 6.5).astype(int)
-                print(f"✓ Created diabetes target based on HbA1c >= 6.5%")
+            if '糖化血红蛋�? in df_work.columns:
+                df_work['diabetes_target'] = (df_work['糖化血红蛋�?] >= 6.5).astype(int)
+                print(f"�?Created diabetes target based on HbA1c >= 6.5%")
                 
                 # Remove rows with missing HbA1c
-                df_work = df_work.dropna(subset=['糖化血红蛋白'])
-                print(f"✓ Rows with valid HbA1c: {len(df_work)}")
+                df_work = df_work.dropna(subset=['糖化血红蛋�?])
+                print(f"�?Rows with valid HbA1c: {len(df_work)}")
                 
                 # Check target distribution
                 target_dist = df_work['diabetes_target'].value_counts()
-                print(f"✓ Target distribution:")
+                print(f"�?Target distribution:")
                 print(f"   No Diabetes (0): {target_dist.get(0, 0)}")
                 print(f"   Diabetes (1): {target_dist.get(1, 0)}")
                 
                 return df_work
             else:
-                print("✗ HbA1c not available - cannot create reliable diabetes target")
+                print("�?HbA1c not available - cannot create reliable diabetes target")
                 return None
                 
         except Exception as e:
-            print(f"✗ Error loading dataset: {e}")
+            print(f"�?Error loading dataset: {e}")
             return None
     
     def preprocess_features(self, df):
@@ -242,7 +242,7 @@ class OptimizedDiabetesPredictor:
             }
             
             print(f"CV F1-Score: {cv_f1_scores.mean():.4f} (+/- {cv_f1_scores.std()*2:.4f})")
-            print(f"Test F1-Score: {f1:.4f} ⭐")
+            print(f"Test F1-Score: {f1:.4f} �?)
             print(f"Test Accuracy: {accuracy:.4f}")
             print(f"Test Precision: {precision:.4f}")
             print(f"Test Recall: {recall:.4f}")
@@ -360,13 +360,13 @@ def main():
     # Load and prepare data
     df = predictor.load_and_prepare_lab_data()
     if df is None:
-        print("❌ Failed to load data")
+        print("�?Failed to load data")
         return None
     
     # Preprocess features
     X, y = predictor.preprocess_features(df)
     if X is None:
-        print("❌ Failed to preprocess data")
+        print("�?Failed to preprocess data")
         return None
     
     # Train models
@@ -378,26 +378,26 @@ def main():
     # Test new cases
     test_cases = [
         {
-            '糖化血红蛋白': 7.5,  # High HbA1c - likely diabetes
-            '葡萄糖': 9.2,        # High glucose
-            '胰岛素': 18.0,       # High insulin
+            '糖化血红蛋�?: 7.5,  # High HbA1c - likely diabetes
+            '葡萄�?: 9.2,        # High glucose
+            '胰岛�?: 18.0,       # High insulin
         },
         {
-            '糖化血红蛋白': 5.8,  # Normal HbA1c - likely no diabetes
-            '葡萄糖': 5.5,        # Normal glucose
-            '胰岛素': 8.0,        # Normal insulin
+            '糖化血红蛋�?: 5.8,  # Normal HbA1c - likely no diabetes
+            '葡萄�?: 5.5,        # Normal glucose
+            '胰岛�?: 8.0,        # Normal insulin
         },
         {
-            '糖化血红蛋白': 6.7,  # Borderline HbA1c
-            '葡萄糖': 7.8,        # Elevated glucose
-            '胰岛素': 12.0,       # Elevated insulin
+            '糖化血红蛋�?: 6.7,  # Borderline HbA1c
+            '葡萄�?: 7.8,        # Elevated glucose
+            '胰岛�?: 12.0,       # Elevated insulin
         }
     ]
     
     predictor.predict_new_cases(test_cases)
     
     print(f"\n{'='*60}")
-    print("✅ DIABETES PREDICTION MODEL COMPLETED")
+    print("�?DIABETES PREDICTION MODEL COMPLETED")
     print(f"🎯 Best F1-Score: {predictor.best_f1_score:.4f}")
     print(f"🏆 Best Model: {predictor.best_model[0]}")
     print("="*60)

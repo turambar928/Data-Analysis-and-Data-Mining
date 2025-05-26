@@ -57,27 +57,27 @@ class DiabetesPredictionSystem:
         # Load Dataset 2 (Lab Results) - Primary dataset for diabetes prediction
         print("\nLoading Dataset 2 (Lab Results)...")
         try:
-            df2 = pd.read_excel("datasets/fina_project_data02.xlsx")
-            print(f"✓ Dataset 2 loaded: {df2.shape}")
+            df2 = pd.read_excel("../data/fina_project_data02.xlsx")
+            print(f"�?Dataset 2 loaded: {df2.shape}")
             
             # Create diabetes target based on HbA1c levels
             df2_processed = self.create_diabetes_target_from_lab_data(df2)
             
         except Exception as e:
-            print(f"✗ Error loading Dataset 2: {e}")
+            print(f"�?Error loading Dataset 2: {e}")
             df2_processed = None
         
         # Load Dataset 1 (Health Check) - Secondary dataset
         print("\nLoading Dataset 1 (Health Check)...")
         try:
-            df1 = pd.read_excel("datasets/fina_project_data01.xlsx")
-            print(f"✓ Dataset 1 loaded: {df1.shape}")
+            df1 = pd.read_excel("../data/fina_project_data01.xlsx")
+            print(f"�?Dataset 1 loaded: {df1.shape}")
             
             # Extract diabetes information from conclusions
             df1_processed = self.create_diabetes_target_from_conclusions(df1)
             
         except Exception as e:
-            print(f"✗ Error loading Dataset 1: {e}")
+            print(f"�?Error loading Dataset 1: {e}")
             df1_processed = None
         
         return df2_processed, df1_processed
@@ -91,14 +91,14 @@ class DiabetesPredictionSystem:
         
         # Key diabetes-related columns
         diabetes_features = [
-            '糖化血红蛋白',  # HbA1c - primary diabetes indicator
-            '葡萄糖',        # Glucose
-            '葡萄糖1', '葡萄糖2', '葡萄糖3',  # Multiple glucose measurements
-            '葡萄糖(餐后2小时)',  # Post-meal glucose
-            '胰岛素',        # Insulin
-            'C肽1',          # C-peptide
-            '胰岛素（餐后2小时）',  # Post-meal insulin
-            'C肽（餐后2小时）',     # Post-meal C-peptide
+            '糖化血红蛋�?,  # HbA1c - primary diabetes indicator
+            '葡萄�?,        # Glucose
+            '葡萄�?', '葡萄�?', '葡萄�?',  # Multiple glucose measurements
+            '葡萄�?餐后2小时)',  # Post-meal glucose
+            '胰岛�?,        # Insulin
+            'C�?',          # C-peptide
+            '胰岛素（餐后2小时�?,  # Post-meal insulin
+            'C肽（餐后2小时�?,     # Post-meal C-peptide
         ]
         
         # Select relevant columns
@@ -110,12 +110,12 @@ class DiabetesPredictionSystem:
         
         # Create diabetes target based on HbA1c levels
         # HbA1c >= 6.5% indicates diabetes
-        if '糖化血红蛋白' in df_work.columns:
-            df_work['diabetes_target'] = (df_work['糖化血红蛋白'] >= 6.5).astype(int)
+        if '糖化血红蛋�? in df_work.columns:
+            df_work['diabetes_target'] = (df_work['糖化血红蛋�?] >= 6.5).astype(int)
             print(f"Created diabetes target based on HbA1c >= 6.5%")
             
             # Remove rows with missing HbA1c
-            df_work = df_work.dropna(subset=['糖化血红蛋白'])
+            df_work = df_work.dropna(subset=['糖化血红蛋�?])
             print(f"Rows with valid HbA1c: {len(df_work)}")
             
             # Check target distribution
@@ -123,13 +123,13 @@ class DiabetesPredictionSystem:
             print(f"Target distribution: {dict(target_dist)}")
             
         else:
-            print("⚠ HbA1c not available, using glucose levels")
+            print("�?HbA1c not available, using glucose levels")
             # Fallback to fasting glucose >= 126 mg/dL (7.0 mmol/L)
-            if '葡萄糖' in df_work.columns:
-                df_work['diabetes_target'] = (df_work['葡萄糖'] >= 7.0).astype(int)
-                df_work = df_work.dropna(subset=['葡萄糖'])
+            if '葡萄�? in df_work.columns:
+                df_work['diabetes_target'] = (df_work['葡萄�?] >= 7.0).astype(int)
+                df_work = df_work.dropna(subset=['葡萄�?])
             else:
-                print("✗ No suitable diabetes indicators found")
+                print("�?No suitable diabetes indicators found")
                 return None
         
         return df_work
@@ -144,7 +144,7 @@ class DiabetesPredictionSystem:
         df_work = df[['姓名', '年龄', '性别', '体检结论']].copy()
         
         # Create diabetes target based on conclusion text
-        diabetes_keywords = ['糖尿病', '血糖', 'diabetes', '高血糖']
+        diabetes_keywords = ['糖尿�?, '血�?, 'diabetes', '高血�?]
         
         df_work['diabetes_target'] = 0
         for keyword in diabetes_keywords:
@@ -167,7 +167,7 @@ class DiabetesPredictionSystem:
         
         # Separate features and target
         if 'diabetes_target' not in df.columns:
-            print("✗ No diabetes target found!")
+            print("�?No diabetes target found!")
             return None, None
         
         # Select numeric features (exclude identifiers and target)
@@ -393,13 +393,13 @@ def main():
     
     # Use Dataset 2 (lab results) as primary data source
     if df2 is not None and len(df2) > 100:
-        print(f"\n✓ Using Dataset 2 (Lab Results) for model training")
+        print(f"\n�?Using Dataset 2 (Lab Results) for model training")
         working_df = df2
     elif df1 is not None and len(df1) > 100:
-        print(f"\n✓ Using Dataset 1 (Health Check) for model training")
+        print(f"\n�?Using Dataset 1 (Health Check) for model training")
         working_df = df1
     else:
-        print("✗ Insufficient data for model training")
+        print("�?Insufficient data for model training")
         return None
     
     # Preprocess features
@@ -420,9 +420,9 @@ def main():
     
     # Example new case (adjust based on available features)
     example_case = {
-        '糖化血红蛋白': 7.2,  # HbA1c = 7.2% (indicates diabetes)
-        '葡萄糖': 8.5,        # Glucose = 8.5 mmol/L
-        '胰岛素': 15.0,       # Insulin level
+        '糖化血红蛋�?: 7.2,  # HbA1c = 7.2% (indicates diabetes)
+        '葡萄�?: 8.5,        # Glucose = 8.5 mmol/L
+        '胰岛�?: 15.0,       # Insulin level
     }
     
     diabetes_system.predict_new_cases(example_case)

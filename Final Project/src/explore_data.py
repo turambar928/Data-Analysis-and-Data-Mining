@@ -32,7 +32,7 @@ def explore_dataset(file_path, dataset_name):
     try:
         # Load the dataset
         df = pd.read_excel(file_path)
-        print(f"âœ“ Successfully loaded {dataset_name}")
+        print(f"âœ?Successfully loaded {dataset_name}")
         print(f"  Shape: {df.shape}")
         
         # Basic information
@@ -91,7 +91,7 @@ def explore_dataset(file_path, dataset_name):
         return df
         
     except Exception as e:
-        print(f"âœ— Error loading {dataset_name}: {e}")
+        print(f"âœ?Error loading {dataset_name}: {e}")
         return None
 
 def main():
@@ -102,8 +102,8 @@ def main():
     print("=" * 60)
     
     # File paths (corrected for running from Final Project directory)
-    file1 = "datasets/fina_project_data01.xlsx"
-    file2 = "datasets/fina_project_data02.xlsx"
+    file1 = "../data/fina_project_data01.xlsx"
+    file2 = "../data/fina_project_data02.xlsx"
     
     # Explore both datasets
     df1 = explore_dataset(file1, "Dataset 1")
@@ -115,15 +115,15 @@ def main():
     print(f"{'='*60}")
     
     if df1 is not None and df2 is not None:
-        print("âœ“ Both datasets loaded successfully")
-        print("âœ“ Proceed with data preprocessing and model development")
-        print("âœ“ Consider combining datasets if they have compatible structure")
-        print("âœ“ Identify the correct target variable for diabetes prediction")
+        print("âœ?Both datasets loaded successfully")
+        print("âœ?Proceed with data preprocessing and model development")
+        print("âœ?Consider combining datasets if they have compatible structure")
+        print("âœ?Identify the correct target variable for diabetes prediction")
     elif df1 is not None or df2 is not None:
-        print("âš  Only one dataset loaded successfully")
-        print("âœ“ Proceed with available dataset")
+        print("âš?Only one dataset loaded successfully")
+        print("âœ?Proceed with available dataset")
     else:
-        print("âœ— Failed to load datasets - check file paths and formats")
+        print("âœ?Failed to load datasets - check file paths and formats")
     
     return df1, df2
 

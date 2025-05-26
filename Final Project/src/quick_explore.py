@@ -17,7 +17,7 @@ def quick_explore(file_path, dataset_name, nrows=1000):
     try:
         # Load only first 1000 rows for quick exploration
         df = pd.read_excel(file_path, nrows=nrows)
-        print(f"âœ“ Loaded first {nrows} rows from {dataset_name}")
+        print(f"âœ?Loaded first {nrows} rows from {dataset_name}")
         print(f"  Sample shape: {df.shape}")
         
         print(f"\nColumns ({len(df.columns)}):")
@@ -61,7 +61,7 @@ def quick_explore(file_path, dataset_name, nrows=1000):
         return df, found_targets
         
     except Exception as e:
-        print(f"âœ— Error: {e}")
+        print(f"âœ?Error: {e}")
         return None, []
 
 def main():
@@ -69,8 +69,8 @@ def main():
     print("=" * 50)
     
     # Explore both datasets with limited rows
-    df1, targets1 = quick_explore("datasets/fina_project_data01.xlsx", "Dataset 1")
-    df2, targets2 = quick_explore("datasets/fina_project_data02.xlsx", "Dataset 2")
+    df1, targets1 = quick_explore("../data/fina_project_data01.xlsx", "Dataset 1")
+    df2, targets2 = quick_explore("../data/fina_project_data02.xlsx", "Dataset 2")
     
     print(f"\n{'='*50}")
     print("SUMMARY")
