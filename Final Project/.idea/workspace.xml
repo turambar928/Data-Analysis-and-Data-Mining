@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3263e403-18fd-483a-bdab-d21b5ead85d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_exploration.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_exploration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diabetes_model_final.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/diabetes_model_final.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/diabetes_model_optimized.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/diabetes_model_optimized.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diabetes_prediction_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/diabetes_prediction_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/explore_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/explore_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate_presentation_charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate_presentation_charts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quick_explore.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quick_explore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test_paths.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +30,10 @@
     &quot;url&quot;: &quot;https://github.com/turambar928/Data-Analysis-and-Data-Mining.git&quot;,
     &quot;accountId&quot;: &quot;f7ab1876-8d52-483a-88e4-90249ced5197&quot;
   }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -78,11 +80,31 @@
       <workItem from="1748245424063" duration="70000" />
       <workItem from="1748245507232" duration="1342000" />
       <workItem from="1748248655591" duration="2537000" />
-      <workItem from="1748251388856" duration="4286000" />
+      <workItem from="1748251388856" duration="4727000" />
+      <workItem from="1748352007513" duration="3764000" />
+      <workItem from="1748394420520" duration="52000" />
+      <workItem from="1748398706257" duration="3276000" />
+      <workItem from="1748417609583" duration="1832000" />
+      <workItem from="1748423926475" duration="72000" />
+      <workItem from="1748484536713" duration="2018000" />
+      <workItem from="1748515659868" duration="2249000" />
+      <workItem from="1748585656770" duration="2566000" />
+      <workItem from="1748626480101" duration="971000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

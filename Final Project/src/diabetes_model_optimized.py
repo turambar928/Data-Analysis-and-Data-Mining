@@ -13,8 +13,6 @@ Key Features:
 - Handles class imbalance
 - Comprehensive evaluation and new case prediction
 
-Author: Data Analysis Team
-Date: 2025
 """
 
 import pandas as pd

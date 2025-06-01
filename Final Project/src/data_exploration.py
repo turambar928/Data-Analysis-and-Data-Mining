@@ -143,9 +143,9 @@ def compare_datasets(df1, df2):
     
     # Check if datasets can be combined
     if len(common_cols) > 0:
-        print(f"\n鉁?Datasets can potentially be combined using common columns")
+        print(f"\nDatasets can potentially be combined using common columns")
     else:
-        print(f"\n鈿?Datasets have no common columns - may need separate analysis")
+        print(f"\nDatasets have no common columns - may need separate analysis")
 
 def create_visualizations(df, dataset_name):
     """
