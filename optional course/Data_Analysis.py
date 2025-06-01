@@ -8,7 +8,7 @@ plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
 plt.rcParams['axes.unicode_minus'] = False
 
 # 读取 Excel 文件
-file_path = '塑料使用记录表（2025.4.16-5.14）.xlsx'
+file_path = '塑料使用记录表（2025.4.16-6.1）.xlsx'
 df = pd.read_excel(file_path)
 
 # 预处理
@@ -22,7 +22,7 @@ plastic_types = df.columns.difference(['总计', '备注'])
 total_usage = df[plastic_types].sum().sort_values(ascending=False)
 plt.figure(figsize=(10, 6))
 sns.barplot(x=total_usage.values, y=total_usage.index, palette='Set2')
-plt.title("各类塑料使用总量统计（2025.4.16 - 5.14）")
+plt.title("各类塑料使用总量统计（2025.4.16 - 6.1）")
 plt.xlabel("使用总次数")
 plt.ylabel("塑料种类")
 plt.tight_layout()
