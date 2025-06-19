@@ -1,0 +1,44 @@
+{
+  "input_size": 9,
+  "hidden_sizes": [
+    64,
+    32,
+    16
+  ],
+  "output_size": 1,
+  "dropout_rate": 0.2,
+  "activation": "relu",
+  "feature_means": [
+    41.886437,
+    0.07485,
+    0.03942,
+    27.31264,
+    5.527507,
+    138.058354,
+    0.41448,
+    2.180347,
+    1.663069
+  ],
+  "feature_stds": [
+    22.517043,
+    0.263438,
+    0.194835,
+    6.59013,
+    1.070677,
+    40.708136,
+    0.493031,
+    1.889659,
+    1.170753
+  ],
+  "feature_names": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "gender_encoded",
+    "smoking_history_encoded",
+    "age_group_encoded"
+  ]
+}

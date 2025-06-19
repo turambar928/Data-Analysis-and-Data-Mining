@@ -137,7 +137,8 @@ def home():
             "/": "API信息",
             "/health": "健康检查",
             "/predict": "单个预测 (POST)",
-            "/predict_batch": "批量预测 (POST)"
+            "/predict_batch": "批量预测 (POST)",
+            "/predict_csv": "CSV文件批量预测 (POST)"
         }
     })
 
@@ -240,6 +241,92 @@ def predict_batch():
             "successful_predictions": len([r for r in results if 'error' not in r]),
             "results": results
         })
+        
+    except Exception as e:
+        return jsonify({"error": f"批量预测失败: {str(e)}"}), 500
+
+@app.route('/predict_csv', methods=['POST'])
+def predict_csv():
+    """CSV文件批量预测接口"""
+    try:
+        # 检查模型是否已加载
+        if model is None:
+            return jsonify({"error": "模型未加载"}), 500
+            
+        # 检查是否有文件上传
+        if 'file' not in request.files:
+            return jsonify({"error": "请上传CSV文件"}), 400
+            
+        file = request.files['file']
+        if file.filename == '':
+            return jsonify({"error": "未选择文件"}), 400
+            
+        if not file.filename.endswith('.csv'):
+            return jsonify({"error": "只支持CSV文件格式"}), 400
+        
+        # 读取CSV文件
+        try:
+            df = pd.read_csv(file)
+        except Exception as e:
+            return jsonify({"error": f"CSV文件读取失败: {str(e)}"}), 400
+        
+        # 验证必需字段
+        required_fields = ['age', 'gender', 'bmi', 'HbA1c_level', 'blood_glucose_level', 
+                         'smoking_history', 'hypertension', 'heart_disease']
+        
+        missing_fields = [field for field in required_fields if field not in df.columns]
+        if missing_fields:
+            return jsonify({"error": f"CSV文件缺少必需字段: {', '.join(missing_fields)}"}), 400
+        
+        # 批量预测结果
+        results = []
+        errors = []
+        
+        # 处理每一行数据
+        for index, row in df.iterrows():
+            try:
+                # 将行数据转换为字典
+                data = row.to_dict()
+                
+                # 预处理数据
+                processed_data = preprocess_input(data)
+                
+                # 进行预测
+                prediction = model.predict(processed_data)[0]
+                probability = model.predict_proba(processed_data)[0]
+                
+                # 保存结果
+                result = {
+                    "row_index": index,
+                    "prediction": int(prediction),
+                    "prediction_text": "糖尿病" if prediction == 1 else "非糖尿病",
+                    "probability": {
+                        "non_diabetes": float(probability[0]),
+                        "diabetes": float(probability[1])
+                    },
+                    "confidence": float(max(probability))
+                }
+                results.append(result)
+                
+            except Exception as e:
+                errors.append({
+                    "row_index": index,
+                    "error": str(e)
+                })
+        
+        # 返回结果
+        response = {
+            "total_samples": len(df),
+            "successful_predictions": len(results),
+            "failed_predictions": len(errors),
+            "results": results
+        }
+        
+        # 如果有错误，添加到响应中
+        if errors:
+            response["errors"] = errors
+        
+        return jsonify(response)
         
     except Exception as e:
         return jsonify({"error": f"批量预测失败: {str(e)}"}), 500

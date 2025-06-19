@@ -29,7 +29,7 @@ def test_prediction():
     try:
         # 1. 健康检查
         print("\n1. 健康检查...")
-        response = requests.get("http://localhost:5000/health", proxies={'http': None, 'https': None})
+        response = requests.get("http://1.94.9.72:5000/health", proxies={'http': None, 'https': None})
         if response.status_code == 200:
             data = response.json()
             print(f"✅ 服务状态: {data.get('status')}")
@@ -38,7 +38,7 @@ def test_prediction():
         # 2. 单个预测
         print("\n2. 单个预测测试...")
         response = requests.post(
-            "http://localhost:5000/predict",
+            "http://1.94.9.72:5000/predict",
             json=test_data,
             headers={'Content-Type': 'application/json'},
             proxies={'http': None, 'https': None}
@@ -69,7 +69,7 @@ def test_prediction():
         }
         
         response = requests.post(
-            "http://localhost:5000/predict",
+            "http://1.94.9.72:5000/predict",
             json=low_risk_data,
             headers={'Content-Type': 'application/json'},
             proxies={'http': None, 'https': None}
@@ -84,7 +84,7 @@ def test_prediction():
             print(f"   置信度: {result.get('confidence', 0):.4f}")
         
         print("\n" + "=" * 50)
-        print("🎉 测试完成！API功能正常，可以部署到华为云了！")
+        print("🎉 测试完成！API功能正常")
         
     except Exception as e:
         print(f"❌ 测试失败: {str(e)}")
